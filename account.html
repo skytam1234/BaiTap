@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <!-- Favicon -->
+<link rel="icon" type="image/png" href="./favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="./favicon/favicon.svg" />
+<link rel="shortcut icon" href="./favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png" />
+<link rel="manifest" href="./favicon/site.webmanifest" />
+
+<!-- ========== Fonts ==========-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+      crossorigin="anonymous" 
+      referrerpolicy="no-referrer"
+/>
+
+<!-- Animation -->
+ <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <script type="module" crossorigin src="/f8-zoom-module-1/assets/modulepreload-polyfill-B5Qt9EMX.js"></script>
+  <script type="module" crossorigin src="/f8-zoom-module-1/assets/main-9ILvPQ_U.js"></script>
+  <link rel="stylesheet" crossorigin href="/f8-zoom-module-1/assets/main-B_zPH48n.css">
+</head>
+<body>
+    <!-- Start Header -->
+<header class="header">
+        <!-- Start header Topbar -->
+        <div class="header__topbar">
+            <div class="container">
+                <div class="header__nav row">
+                    <div class="header__nav-left header__nav-left-mb col">
+                        <a href="#!" class="header__link-right">Về chúng tôi</a>
+                        <img src="./img/icon-mb.svg" alt="icon mb" class="header__icon-mb" style="display: none;"> 
+                    </div>
+                    <div class="header__nav-right col ">
+                        <select class="header__select">
+                            <option>Trung tâm hỗ trợ</option>
+                        </select>
+                        <!-- <a href="#!" class="header__link">Trung tâm hỗ trợ</a> -->
+                        <div class="header__language-selector">
+                            <select class="header__select">
+                                <option>ENG</option>
+                            </select>
+                        </div>
+                        <div class="header__account">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.46282 1.33325C12.1448 1.33325 15.1295 4.31792 15.1295 7.99992C15.1318 9.53851 14.5997 11.0301 13.6241 12.2199L13.6375 12.2346L13.5495 12.3093C12.9242 13.0487 12.1451 13.6427 11.2666 14.0499C10.388 14.457 9.43114 14.6675 8.46282 14.6666C6.49615 14.6666 4.72948 13.8153 3.50948 12.4619L3.37615 12.3086L3.28815 12.2353L3.30148 12.2193C2.32609 11.0297 1.79401 9.53828 1.79615 7.99992C1.79615 4.31792 4.78082 1.33325 8.46282 1.33325ZM8.46282 11.3333C7.22282 11.3333 6.10215 11.7279 5.26748 12.2706C6.18921 12.9619 7.31066 13.3348 8.46282 13.3333C9.61497 13.3348 10.7364 12.9619 11.6581 12.2706C10.7043 11.6595 9.59556 11.3343 8.46282 11.3333ZM8.46282 2.66659C7.45917 2.66656 6.47587 2.94973 5.62596 3.48355C4.77605 4.01738 4.09402 4.78018 3.65826 5.6843C3.22249 6.58842 3.05069 7.59714 3.16258 8.59454C3.27448 9.59193 3.66554 10.5375 4.29082 11.3226C5.37148 10.5473 6.84615 9.99992 8.46282 9.99992C10.0795 9.99992 11.5541 10.5473 12.6348 11.3226C13.2601 10.5375 13.6512 9.59193 13.763 8.59454C13.8749 7.59714 13.7031 6.58842 13.2674 5.6843C12.8316 4.78018 12.1496 4.01738 11.2997 3.48355C10.4498 2.94973 9.46647 2.66656 8.46282 2.66659ZM8.46282 3.99992C9.17006 3.99992 9.84834 4.28087 10.3484 4.78097C10.8485 5.28106 11.1295 5.95934 11.1295 6.66659C11.1295 7.37383 10.8485 8.05211 10.3484 8.5522C9.84834 9.0523 9.17006 9.33325 8.46282 9.33325C7.75557 9.33325 7.07729 9.0523 6.5772 8.5522C6.0771 8.05211 5.79615 7.37383 5.79615 6.66659C5.79615 5.95934 6.0771 5.28106 6.5772 4.78097C7.07729 4.28087 7.75557 3.99992 8.46282 3.99992ZM8.46282 5.33325C8.10919 5.33325 7.77006 5.47373 7.52001 5.72378C7.26996 5.97382 7.12948 6.31296 7.12948 6.66659C7.12948 7.02021 7.26996 7.35935 7.52001 7.60939C7.77006 7.85944 8.10919 7.99992 8.46282 7.99992C8.81644 7.99992 9.15558 7.85944 9.40562 7.60939C9.65567 7.35935 9.79615 7.02021 9.79615 6.66659C9.79615 6.31296 9.65567 5.97382 9.40562 5.72378C9.15558 5.47373 8.81644 5.33325 8.46282 5.33325Z" fill="white"/>
+                            </svg>
+                            <ul class="header__account-nav">
+                                <li>
+                                    <a href="#!" class="header__account-link">
+                                        Tài Khoản
+                                    </a>
+                                    <ul class="header__account-submenu">
+                                         <li>
+                                            <a href="./index.html">Trang home</a>
+                                        </li>
+                                        <li>
+                                            <a href="./sign-in.html">Đăng nhập</a>
+                                        </li>
+                                         <li>
+                                            <a href="./sign-up.html">Đăng xuất</a>
+                                        </li>
+                                         <li>
+                                            <a href="./collection.html">Sản Phẩm</a>
+                                        </li>
+                                         <li>
+                                            <a href="./payment.html">Thanh toán</a>
+                                        </li>
+                                         <li>
+                                            <a href="./account.html">Tài khoản người dùng</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="header__hotline-mb">
+                            <span class="header__hotline-md__icon" style="display: none;">
+                            </span>
+                            <span class="header__hotline-mb__text" style="display: none;">
+                                Hotline: 19200 10800
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End header__topbar -->
+        <!-- Start Header Main -->
+        <div class="header__main">
+            <div class="container">
+                <div class="row">
+                    <div class="header__logo col">
+                        <img src="./img/logo-header.png" alt="logo-header" class="header__logo-image">
+                        <span class="header__logo-text">
+                            <strong>Nap</strong>
+                            <strong class="header__logo-highlight">Tien</strong>
+                        </span>
+                    </div>
+                    <!-- End Header Main -->
+                    <!-- Start Form Search -->
+                    <form class="header__search-form col-3">
+                        <div class="header__search-category">
+                            <ul class="header__search-nav">
+                                <li>
+                                    <a href="#!">
+                                        All categories
+                                    </a>
+                                    <ul class="header__search-submenu">
+                                        <li>
+                                            <a href="#!">Card voucher</a>
+                                        </li>
+                                         <li>
+                                            <a href="#!">Card voucher</a>
+                                        </li>
+                                         <li>
+                                            <a href="#!">Card voucher</a>
+                                        </li>
+                                         <li>
+                                            <a href="#!">Card voucher</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <span class="header__dividing-brick"></span>
+                        <input type="search" class="header__search-input" placeholder="Search">
+                        <button class="header__search-button">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                    <!-- End Form Search -->
+                </div>
+            </div>
+        </div>
+        <!-- End Header Main -->
+
+        <!-- Start Header Navigation -->
+         <div class="header__bottom">
+            <div class="container">
+                        <nav class="header__nav row">
+                            <ul class="header__menu col">
+                                <li class="header__menu-item">
+                                    <a href="#!" class="header__menu-link">
+                                        Trang chủ
+                                    </a>
+                                    <label for="drapwer" class="drapwer-open">
+                                        <img src="./img/icon-menu.svg" alt="icon-menu" class="header__icon-menu" hidden>
+                                    </label>
+                                    <input type="checkbox" id="drapwer" hidden>
+                                    <div class="drapwer-overlay" hidden></div>
+                                    <div class="nav-wrapper">
+                                        <div class="nav-wrapper__logo" hidden>
+                                            <a href="#">
+                                                <img src="./img/logo-header.png" alt="logo-header" class="nav-wrapper-image" hidden>
+                                            </a>
+                                            <span class="nav-wrapper-text" hidden>
+                                                <strong>Card</strong>
+                                                <strong class="nav-wrapper-highlight">Cardtob</strong>
+                                            </span>
+                                            <label for="drapwer" class="nav-wrapper--close">
+                                                <i class="fa-solid fa-xmark"></i>
+                                            </label>
+                                        </div>
+                                        <div class="nav-wrapper__dot"></div>
+                                        <ul class="nav" hidden>
+                                            <li>
+                                                <a href="#!">Card voucher</a>
+                                            </li>
+                                            <li>
+                                                <a href="#!">Top-Up</a>
+                                            </li>
+                                            <li>
+                                                <a href="#!">Contact us</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="header__menu-phone header__menu-item--has-dropdow">
+                                    <ul class="header__menu-phonenav">
+                                        <li>
+                                            <a href="#!">
+                                                Thẻ điện thoại
+                                            </a>
+                                            <ul class="header__menu-phonesubmenu">
+                                                <li>
+                                                    <a href="#!">Gift card</a>
+                                                    <div class="header__wrapper">
+                                                        <ul class="header__menu-phonesubmenu--child-1">
+                                                            <li>
+                                                                <a href="#!">IMo girf car</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">WTFast card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">Nike Gift card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">iTunes Gift card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">Victoria's Secret Gift card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">IMo girf car</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">WTFast card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">Nike Gift card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">iTunes Gift card</a>
+                                                            </li>
+                                                        </ul>
+                                                         <ul class="header__menu-phonesubmenu--child-2">
+                                                              <li>
+                                                                <a href="#!">IMo girf car</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">WTFast card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">Nike Gift card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">iTunes Gift card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">Victoria's Secret Gift card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">IMo girf car</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">WTFast card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">Nike Gift card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">iTunes Gift card</a>
+                                                            </li>
+                                                        </ul>
+                                                         <ul class="header__menu-phonesubmenu--child-3">
+                                                               <li>
+                                                                <a href="#!">IMo girf car</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">WTFast card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">Nike Gift card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">iTunes Gift card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">Victoria's Secret Gift card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">IMo girf car</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">WTFast card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">Nike Gift card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">iTunes Gift card</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <a href="#!">Wallet gift card</a>
+                                                    <div class="header__wrapper">
+                                                        <ul class="header__menu-phonesubmenu--child-1">
+                                                            <li>
+                                                                <a href="#!">IMo girf car</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">WTFast card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">Nike Gift card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">iTunes Gift card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">Victoria's Secret Gift card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">IMo girf car</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">WTFast card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">Nike Gift card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">iTunes Gift card</a>
+                                                            </li>
+                                                        </ul>
+                                                         <ul class="header__menu-phonesubmenu--child-2">
+                                                              <li>
+                                                                <a href="#!">IMo girf car</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">WTFast card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">Nike Gift card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">iTunes Gift card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">Victoria's Secret Gift card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">IMo girf car</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">WTFast card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">Nike Gift card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">iTunes Gift card</a>
+                                                            </li>
+                                                        </ul>
+                                                         <ul class="header__menu-phonesubmenu--child-3">
+                                                               <li>
+                                                                <a href="#!">IMo girf car</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">WTFast card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">Nike Gift card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">iTunes Gift card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">Victoria's Secret Gift card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">IMo girf car</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">WTFast card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">Nike Gift card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">iTunes Gift card</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <a href="#!">iTunes Gift card</a>
+                                                    <div class="header__wrapper">
+                                                        <ul class="header__menu-phonesubmenu--child-1">
+                                                            <li>
+                                                                <a href="#!">IMo girf car</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">WTFast card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">Nike Gift card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">iTunes Gift card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">Victoria's Secret Gift card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">IMo girf car</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">WTFast card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">Nike Gift card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">iTunes Gift card</a>
+                                                            </li>
+                                                        </ul>
+                                                         <ul class="header__menu-phonesubmenu--child-2">
+                                                              <li>
+                                                                <a href="#!">IMo girf car</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">WTFast card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">Nike Gift card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">iTunes Gift card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">Victoria's Secret Gift card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">IMo girf car</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">WTFast card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">Nike Gift card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">iTunes Gift card</a>
+                                                            </li>
+                                                        </ul>
+                                                         <ul class="header__menu-phonesubmenu--child-3">
+                                                               <li>
+                                                                <a href="#!">IMo girf car</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">WTFast card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">Nike Gift card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">iTunes Gift card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">Victoria's Secret Gift card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">IMo girf car</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">WTFast card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">Nike Gift card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">iTunes Gift card</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <a href="#!">WTFast time card</a>
+                                                    <div class="header__wrapper">
+                                                        <ul class="header__menu-phonesubmenu--child-1">
+                                                            <li>
+                                                                <a href="#!">IMo girf car</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">WTFast card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">Nike Gift card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">iTunes Gift card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">Victoria's Secret Gift card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">IMo girf car</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">WTFast card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">Nike Gift card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">iTunes Gift card</a>
+                                                            </li>
+                                                        </ul>
+                                                         <ul class="header__menu-phonesubmenu--child-2">
+                                                              <li>
+                                                                <a href="#!">IMo girf car</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">WTFast card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">Nike Gift card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">iTunes Gift card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">Victoria's Secret Gift card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">IMo girf car</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">WTFast card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">Nike Gift card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">iTunes Gift card</a>
+                                                            </li>
+                                                        </ul>
+                                                         <ul class="header__menu-phonesubmenu--child-3">
+                                                               <li>
+                                                                <a href="#!">IMo girf car</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">WTFast card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">Nike Gift card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">iTunes Gift card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">Victoria's Secret Gift card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">IMo girf car</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">WTFast card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">Nike Gift card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">iTunes Gift card</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                 <li>
+                                                    <a href="#!">WTFAST</a>
+                                                    <div class="header__wrapper">
+                                                        <ul class="header__menu-phonesubmenu--child-1">
+                                                            <li>
+                                                                <a href="#!">IMo girf car</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">WTFast card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">Nike Gift card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">iTunes Gift card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">Victoria's Secret Gift card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">IMo girf car</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">WTFast card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">Nike Gift card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">iTunes Gift card</a>
+                                                            </li>
+                                                        </ul>
+                                                         <ul class="header__menu-phonesubmenu--child-2">
+                                                              <li>
+                                                                <a href="#!">IMo girf car</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">WTFast card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">Nike Gift card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">iTunes Gift card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">Victoria's Secret Gift card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">IMo girf car</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">WTFast card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">Nike Gift card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">iTunes Gift card</a>
+                                                            </li>
+                                                        </ul>
+                                                         <ul class="header__menu-phonesubmenu--child-3">
+                                                               <li>
+                                                                <a href="#!">IMo girf car</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">WTFast card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">Nike Gift card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">iTunes Gift card</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#!">Victoria's Secret Gift card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">IMo girf car</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">WTFast card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">Nike Gift card</a>
+                                                            </li>
+                                                             <li>
+                                                                <a href="#!">iTunes Gift card</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div> 
+                                                </li>
+                                            </ul>
+                                        </li>
+                                   </ul>
+                                </li>
+                                <li class="header__menu-item header__menu-item--has-dropdow">
+                                    <ul class="header__menu-itemnav">
+                                        <li>
+                                            <a href="#!">
+                                                Nạp game
+                                            </a>
+                                            <ul class="header__menu-itemsubmenu">
+                                                <li>
+                                                    <a href="#!">Girf card</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#!">EA Play card</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#!">WFT card</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#!">Nexon card</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                   </ul>
+                                </li>
+                            </ul>
+                             <div class="header__hotline col">
+                                <span class="header__hotline-icon">
+                                </span>
+                                <img src="./img/search-menu.svg" alt="search-menu" class="header__search-menu" style="display: none;">
+                                <img src="./img/user-menu.svg" alt="search-menu" class="header__user-menu" style="display: none;">
+                                <span class="header__hotline-text">
+                                    Hotline: 19200 10800
+                                </span>
+                             </div>
+                    </nav>
+                </div>
+            </div>
+        <!-- End Header Navigation -->
+</header>
+    <main class="account">
+        <div class="row">
+            <div class="col">
+                <div class="accout-header">
+                    <span class="accout-header__circle accout-header__circle--large"></span>
+                    <span class="accout-header__circle accout-header__circle-large__in"></span>
+                    <span class="accout-header__circle accout-header__circle--medium"></span>
+                    <span class="accout-header__circle accout-header__circle-medium__in"></span>
+                    <span class="accout-header__circle accout-header__circle--small"></span>
+                    <span class="accout-header__circle accout-header__circle-small__in"></span>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="account__wrapper row row-cols-xl-2 row-cols-md-1">
+                    <div class="col">
+                        <section class="account__sidebar">
+                            <header class="account__user-info">
+                                <figure class="user-info__avatar">
+                                    <img src="./img/account-avatar.svg" alt="Ảnh đại diện" />
+                                    <label for="avatarInput" class="user-info__camera">
+                                        <span class="user-info__avatar-icon">
+                                            <i class="fa-solid fa-camera"></i>
+                                        </span>
+                                    </label>
+                                     <input type="file" id="avatarInput" accept="image/*" hidden>
+                                </figure>
+                                <h2 class="user-info__name">Nguyễn Xuân Việt</h2>
+                                <span class="user-info__label">Thông tin tài khoản</span>
+                                <span class="user-info__lines"></span>
+                            </header>
+                            <nav class="account__navigation">
+                                <ul class="account-navigation__list">
+                                    <li class="account-navigation__item account-navigation__item--active">
+                                       <i class="fa-solid fa-circle-user"></i>
+                                       <a href="#!" class="account-navigation__link">Tài khoản</a>
+                                    </li>
+                                    <li class="account-navigation__item">
+                                        <i class="fa-solid fa-clock-rotate-left"></i>
+                                       <a href="#!" class="account-navigation__link">Lịch sử mua hàng</a>
+                                    </li>
+                                    <li class="account-navigation__item">
+                                        <i class="fa-solid fa-clock-rotate-left"></i>
+                                       <a href="#!" class="account-navigation__link">Nạp tiền & Rút tiền</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </section>
+                    </div>
+                    <div class="col gy-md-3">
+                        <section class="account__overview">
+                            <h1 class="overview__title">Tổng quan tài khoản</h1>
+                            <div class="overview__content">
+                                <article class="balance">
+                                    <h2 class="balance__title">Số dư hiện tại</h2>
+                                    <span class="balance__lines"></span>
+                                    <div class="balance__wrapper">
+                                        <div class="balance__left">
+                                            <img src="./img/coin.svg" alt="coin">
+                                            <p class="balance__amount">18.000đ</p>
+                                        </div>
+                                        <button class="balance__topup-button">Nạp tiền</button>
+                                    </div>
+                                </article>
+                                <article class="purchase-history">
+                                    <header class="purchase-history__header">
+                                        <h2 class="purchase-history__title">Lịch sử mua hàng</h2>
+                                        <a href="#" class="purchase-history__link">Xem thêm</a>
+                                    </header>
+                                    <ul class="purchase-history__stats">
+                                        <li class="purchase-history__stat">
+                                            <strong>12</strong>
+                                            <span>Chờ xử lý</span>
+                                        </li>
+                                        <li class="purchase-history__stat">
+                                            <strong>8</strong>
+                                            <span>Đang xử lý</span>
+                                        </li>
+                                        <li class="purchase-history__stat">
+                                            <strong>8</strong>
+                                            <span>Hoàn thành</span>
+                                        </li>
+                                        <li class="purchase-history__stat">
+                                            <strong>8</strong>
+                                            <span>Bị huỷ</span>
+                                        </li>
+                                    </ul>
+                                </article>
+                            </div>
+                        </section>
+                    </div>
+            </div>
+        </div>
+    </main>
+    <!-- Statr Footer -->
+<footer class="footer">
+      <!-- Start Conatiner -->
+      <div class="container">
+            <div class="row">
+                  <div class="col">
+                        <!-- Start Footer Container -->
+                        <div class="footer__container">
+                              <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+                                    <div class="col-3">
+                                         <!-- Statr Section-one -->
+                                          <section class="footer__section footer__section--about">
+                                                <h2 class="footer__title">About Us</h2>
+                                                <div class="row">
+                                                      <div class="col gy-2">
+                                                            <ul class="footer__list">
+                                                                  <li class="footer__item">
+                                                                        <a href="#!" class="footer__link">
+                                                                              About us
+                                                                        </a>
+                                                                  </li>
+                                                                  <li class="footer__item">
+                                                                        <a href="#!" class="footer__link">
+                                                                              News  
+                                                                        </a>
+                                                                  </li>
+                                                                  <li class="footer__item">
+                                                                        <a href="#!" class="footer__link">
+                                                                              Support
+                                                                        </a>
+                                                                  </li>
+                                                                  <li class="footer__item">
+                                                                        <a href="#!" class="footer__link">
+                                                                              Contact
+                                                                        </a>
+                                                                  </li> 
+                                                            </ul>
+                                                      </div>
+                                                </div>
+                                          </section>
+                                          <!-- End Section-one -->
+                                    </div>
+                                    <div class="col-3 gy-md-2">
+                                          <!-- Statr Section-two -->
+                                          <section class="footer__section footer__section--service">
+                                                <h2 class="footer__title">Service</h2>
+                                                <div class="row">
+                                                      <div class="col gy-2 gy-md-3">
+                                                            <ul class="footer__list">
+                                                                  <li class="footer__item">
+                                                                        <a href="#!" class="footer__link">
+                                                                              Help Center
+                                                                        </a>
+                                                                  </li>
+                                                                  <li class="footer__item">
+                                                                        <a href="#!" class="footer__link">
+                                                                              Privacy Policy
+                                                                        </a>
+                                                                  </li>
+                                                                  <li class="footer__item">
+                                                                        <a href="#!" class="footer__link">
+                                                                              How to buy
+                                                                        </a>
+                                                                  </li>
+                                                                  <li class="footer__item">
+                                                                        <a href="#!" class="footer__link">
+                                                                              Terms of use
+                                                                        </a>
+                                                                  </li> 
+                                                            </ul>
+                                                      </div>
+                                                </div>
+                                          </section>
+                                          <!-- End Section-two -->
+                                    </div>
+                                    <div class="col-4 gy-md-2">
+                                          <!-- Statr Section-three -->
+                                         <section class="footer__section footer__section--payment">
+                                               <h2 class="footer__title">Service</h2>
+                                               <div class="row">
+                                                      <div class="col  gy-md-3">
+                                                            <div class="footer__payment-logo">
+                                                                  <img src="./img/paypal.png" alt="PayPal" class="footer__payment-logo-paypal">
+                                                                  <img src="./img/visa.png" alt="Visa" class="footer__payment-logo-visa">
+                                                                  <img src="./img/shb.png" alt="SHB" class="footer__payment-logo-shb">
+                                                                  <img src="./img/gpa.png" alt="GBA" class="footer__payment-logo-gpa">
+                                                                  <img src="./img/sgb.png" alt="SGB" class="footer__payment-logo-sgb">
+                                                                  <img src="./img/cod.png" alt="Cod" class="footer__payment-logo-cod">
+                                                            </div>
+                                                      </div>
+                                               </div>
+                                         </section>
+                                          <!-- End Section-three -->
+                                    </div>
+                                    <div class="col-2 gy-lg-2">
+                                          <!-- Statr Section-four -->
+                                          <section class="footer__section footer__section--follow">
+                                                <h2 class="footer__title">Follow Us</h2>
+                                                <div class="row">
+                                                      <div class="col gy-2 gy-md-3">
+                                                            <ul class="footer__social-list">
+                                                                 <li class="footer__social-item">
+                                                                       <img src="./img/facebook.png" alt="Facebook" class="footer__social-img">
+                                                                       <a href="#" class="footer__social-link">Facebook</a>
+                                                                 </li>
+                                                                 <li class="footer__social-item">
+                                                                       <img src="./img/linke.png" alt="Linke" class="footer__social-img">
+                                                                       <a href="#" class="footer__social-link">LinkedIn</a>
+                                                                 </li>
+                                                                 <li class="footer__social-item">
+                                                                       <img src="./img/instagram.png" alt="Instagram" class="footer__social-img">
+                                                                       <a href="#" class="footer__social-link">Instagram</a>
+                                                                 </li>
+                                                                 <li class="footer__social-item">
+                                                                       <img src="./img/zalo.png" alt="Zalo" class="footer__social-img">
+                                                                       <a href="#" class="footer__social-link">Zalo</a>
+                                                                 </li>
+                                                           </ul>
+                                                      </div>
+                                                </div>
+                                          </section>
+                                           <!-- End Section-four -->
+                                    </div>
+                              </div>
+                             
+                        </div>
+                        <!-- End Footer Container -->
+                  </div>
+            </div>
+            <!-- Start footer Bottom -->
+            <div class="footer__bottom">
+                  <div class="row gx-5">
+                        <div class="col">
+                              <h2 class="footer__title">COMPANY</h2>
+                              <div class="row">
+                                    <div class="col gy-2">
+                                          <div class="footer__company">
+                                                <p class="footer__text">
+                                                      <a href="tel:+84982636800">
+                                                            Hotline: 0982636800 (Các ngày trong tuần từ 8h đến 24h)
+                                                      </a>
+                                                </p>
+                                                <p class="footer__text">
+                                                      <a href="mailto:abcs@gmail.com">
+                                                            Email: abcs@gmail.
+                                                      </a>
+                                                </p>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="col gy-md-2">
+                              <div class="footer__certification">
+                                    <h2 class="footer__title">certification</h2>
+                                    <div class="row">
+                                          <div class="col gy-2">
+                                                <div class="footer__certification-logos">
+                                                      <img src="./img/bct.png" alt="Bo cong thuong" class="footer__certification-img">
+                                                      <img src="./img/chung-nhan.png" alt="Chung nhan" class="footer__certification-img">
+                                                      <img src="./img/dmca.png" alt="dmca" class="footer__certification-img">
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+            <!-- End footer Bottom -->
+      </div>
+      <!-- End Conatiner -->
+      <div class="footer__copy">
+            <div class="footer__copyright">
+               <p class="footer__copy-text">© 2024 by NapThe. All Rights Reserved.</p>
+            </div>
+      </div>     
+</footer>
+<!-- End Footer -->
+
+
+</body>
+</html>
