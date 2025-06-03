@@ -1,0 +1,815 @@
+@use "/scss/mixins";
+@use "../variables";
+
+.header{
+    // Start Topbar
+    &__topbar{
+        height: 3.9rem;
+        line-height: 3.9rem;
+        background: variables.$primary-color;
+        box-shadow: 0px 4.206px 11.25px 0px rgba(244, 244, 244, 0.50);
+        @include mixins.screen(md){
+            height: 6.9rem;
+            line-height: 6.9rem;
+        }
+    }
+    &__nav-left{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__link-right{
+         @include mixins.screen(md){
+            display: none;
+        }
+    }
+    &__link-right,
+    &__select,
+    &__account-link{
+        color: variables.$color-header;
+        font-family: "Quicksand";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.8rem;
+    }
+    &__hotline-mb{
+        display: flex;
+    }
+    &__icon-mb{
+        width: 3rem;
+        @include mixins.screen(md){
+             display: block !important;
+        }
+    }
+    &__hotline-md__icon{
+        @include mixins.screen(md){
+             display: block !important;
+        }
+    }
+    &__hotline-md__icon::before{
+        position: relative;
+        top: -2.4rem;
+        left: 0.5rem;
+        content: "\f095";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 600;
+        font-size: 1.2rem;
+        color: #fff;
+    }
+    &__hotline-mb__text{
+        color: var(--Greys-Colors-07, #FFF);
+        font-family: "Quicksand";
+        font-size: 1.2rem;
+        font-style: normal;
+        font-weight: 600;
+        @include mixins.screen(md){
+             display: block !important;
+        }
+    }
+    &__hotline-mb{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    &__hotline-md__icon{
+        display: inline-block;
+        width: 2.5rem;
+        height: 2.5rem;
+        border: 0.2rem solid #fff;
+        border-radius: 50%;
+        font-size: 1.2rem;
+    }
+    &__nav-right{
+        display: flex;
+        justify-content:end;
+    }
+    &__select{
+        border: none;
+        outline: none;
+        background: transparent;
+        @include mixins.screen(md){
+            display: none;
+        }
+    }
+    &__account{
+        display: flex;
+        align-items: center;
+         @include mixins.screen(md){
+            width: 8.3rem;
+        }
+        @include mixins.screen(md){
+            display: none;
+        }
+    }
+    &__account-nav > li {
+        position: relative;
+    }
+    &__account-nav > li > a::after{
+        position: relative;
+        display: inline-block;
+        left: 0.5rem;
+        content: "\f078";
+        font-family: "Font Awesome 6 Free";
+        right: 1.5rem;
+        font-weight: 600;
+        font-size: 1.2rem;
+        color: #fff;
+        transition: all 0.4s ease;
+    }
+    &__account-submenu{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(0);
+        transform-origin: top;
+        gap: 0.5rem;
+        top: 4.1rem;
+        right: -7.5rem;
+        z-index: 1;
+        width: 21.9rem;
+        min-height: 23.7rem;
+        border-radius: 1rem;
+        border: 0.1rem solid #FFF0EC;
+        background: #FFF;
+        box-shadow: 0.3rem 0.8rem 1.5rem 0px rgba(215, 215, 215, 0.5);
+        transition: all 0.4s ease;
+    }
+    &__account-nav > li:hover &__account-submenu{
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+    }
+    &__account-submenu li{
+       width: 17.3rem;
+    }
+    &__account-submenu li:hover{
+        background: var(--Secondary-Colors-11, #FFDBCE);
+        border-radius: 0.5rem;
+    }
+    &__account-submenu li:first-child{
+       margin-top: 1rem;
+    }
+    &__account-submenu a{
+        display: block;
+        height: 3.2rem;
+        line-height: 3.2rem;
+        text-align: center;
+        font-family: "Quicksand";
+        color: var(--Color-Text-01, #323232);
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+    // Start Main
+    &__main{
+        display: flex;
+        justify-content: space-between;
+        height: 9.5rem;
+        line-height: 9.5rem;
+        background: variables.$background-header;
+        @include mixins.screen(md){
+            display: none;
+        }
+    }
+    &__logo{
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+    }
+    &__logo-text{
+        color: variables.$logo-text;
+        font-family: "Poppins";
+        font-size: 3.2rem;
+        font-weight: 600;
+    }
+    &__logo-highlight{
+        color: variables.$primary-color;
+        font-family: "Poppins";
+        font-size: 3.2rem;
+        font-weight: 600;
+    }
+    // Start Form Search
+    &__search-form{
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 48rem;
+        height: 4.2rem;
+        line-height: 4.2;
+        border: 1px solid variables.$color-header;
+        border-radius: 99.9rem;
+        background-color : variables.$color-header;
+    }
+    &__search-nav > li > a{
+        display: inline-block;
+        margin-left: 1.8rem;
+        color: variables.$color-search;
+        font-family: "Manrope";
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 400;
+        background: transparent;
+        line-height: normal;
+
+        outline: none;
+        border: none;
+    }
+    &__search-nav > li:hover  &__search-submenu{
+        opacity: 1;
+        transform: scale(1);
+    }
+     &__search-nav > li:hover  a::after{
+        color: #ED5A25;
+
+    }
+     &__search-nav > li > a::after{
+        position: relative;
+        left: 0.5rem;
+        content: "\f078";
+        font-family: "Font Awesome 6 Free";
+        right: 1.5rem;
+        font-weight: 600;
+        font-size: 1.2rem;
+        color: #404040;
+    }
+
+    &__search-nav > li {
+        position: relative;
+    }
+    &__search-submenu{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+        transform: scale(0);
+        transform-origin: top;
+        gap: 0.5rem;
+        width: 14.7rem;
+        min-height: 21.7rem;
+        border-radius: 1rem;
+        border: 0.1rem solid #FFF0EC;
+        background: #FFF;
+        box-shadow: 0.3rem 0.8rem 1.5rem 0rem rgba(215, 215, 215, 0.50);
+        top: 6.2rem;
+        z-index: 1;
+        transition: all 0.5s ease;
+    }
+    &__search-submenu li {
+        margin-left: 1.4rem;
+        margin-right: 1.4rem;
+        border-radius: 0.5rem;
+        transition: all 0.3s ease;
+    }
+    &__search-submenu li:hover {
+        background: var(--Secondary-Colors-11, #FFDBCE);
+    }
+    &__search-submenu li:first-child {
+        margin-top: 1.4rem;
+    }
+    
+    &__search-submenu a {
+        display:block;
+        height: 4.4rem;
+        line-height: 4.4rem;
+        text-align: center;
+        color: var(--Color-Text-01, #323232);
+        font-family: "Quicksand";
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+    &__dividing-brick{
+        width: 0.1rem;
+        height: 3.9rem;
+        background: #ebd8d3;
+    }
+    &__search-input{
+        color: variables.$color-search;
+        font-family: "Manrope";
+        outline: none;
+        border: none;
+        background: transparent;
+    }
+    &__search-button{
+        color: variables.$color-search;
+
+    }
+    // Start Header Navigation
+    &__bottom{
+        background: variables.$color-header;
+        height: 5.4rem;
+        box-shadow: 0px 4.206px 11.25px 0px rgba(244, 244, 244, 0.50);
+         @include mixins.screen(md){
+            height: 6.4rem;
+            line-height: 6.4rem;
+            background: #fff;
+        }
+    }
+    &__menu{
+        display: flex;
+        gap: 2rem;
+        line-height: 5.4rem;
+    }
+    &__menu-link{
+        color: variables.$logo-text;
+        font-family: "Quicksand";
+        font-size: 1.4rem;
+        font-weight: 500;
+        @include mixins.screen(md){
+            display:none;
+        }
+    }
+    &__menu-item{
+        display: flex;
+        height: 6.4rem;
+    }
+    &__menu-item::after{
+        @include mixins.screen(md){
+            display:none;
+        }
+    }
+    &__icon-menu{
+        width: 3.4rem;
+        @include mixins.screen(md){
+            display: block;
+        }
+    }
+    &__search-menu,
+    &__user-menu    {
+        width: 3rem;
+    }
+    &__menu-itemnav{
+        @include mixins.screen(lg){
+           display: none;
+        }
+         @include mixins.screen(sm){
+           display: none;
+        }
+    }
+    &__menu-itemnav > li > a{
+        color: var(--Color-Text-03, #565656);
+        font-family: "Quicksand";
+        font-size: 1.4rem;
+        font-weight: 500;
+        transition: all 0.4s ease;
+    }
+    &__menu-itemnav > li > a::after{
+        position: relative;
+        display: inline-block;
+        left: 0.5rem;
+        content: "\f078";
+        font-family: "Font Awesome 6 Free";
+        right: 1.5rem;
+        font-weight: 600;
+        font-size: 1.2rem;
+        color: variables.$logo-text;
+        transition: all 0.4s ease;
+    }
+    &__menu-itemnav > li:hover > a{
+        color: #ED5A25;
+    }
+     &__menu-itemnav > li:hover a::after{
+        position: relative;
+        display: inline-block;
+        transform: rotate(180deg);
+        color: #ED5A25;
+    }
+    &__menu-itemnav > li{
+        position: relative;
+    }
+    &__menu-itemnav:hover  &__menu-overlay{
+         opacity: 1;
+         visibility: visible;
+    }
+    &__menu-itemnav > li:hover &__menu-itemsubmenu{
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+    }
+    &__menu-itemsubmenu{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        opacity:0;
+        visibility: hidden;
+        transform: scale(0);
+        transform-origin: 40% top;
+        gap: 0.5rem;
+        top: 5.5rem;
+        right: -12.2rem;
+        z-index: 1;
+        width: 21.9rem;
+        min-height: 21.2rem;
+        border-radius: 1rem;
+        border: 0.1rem solid #FFF0EC;
+        background: #FFF;
+        box-shadow: 0.3rem 0.8rem 1.5rem 0px rgba(215, 215, 215, 0.5);
+        transition: all 0.4s ease;
+    }
+    &__menu-itemsubmenu li{
+        margin-left: 1.4rem;
+        width: 189px;
+        padding: 4px 8px;
+        border-radius: 5px;
+        transition: all 0.4s ease;
+    }
+    &__menu-itemsubmenu li:hover{
+        background: var(--Secondary-Colors-11, #FFDBCE);
+    }
+    &__menu-itemsubmenu li:first-child{
+        margin-top: 1.4rem;
+    }
+    &__menu-itemsubmenu a{
+        display: block;
+        height: 3.2rem;
+        line-height: 3.2rem;
+        color: var(--Color-Text-01, #323232);
+        font-family: "Quicksand";
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+    &__menu-phonenav{
+        position: relative;
+        @include mixins.screen(lg){
+            display: none;
+        }
+        @include mixins.screen(sm){
+            display: none;
+        }
+    }
+    &__menu-phonenav > li > a {
+        color: #404040;
+        font-family: "Quicksand";
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+    &__menu-phonenav > li > a::after {
+        position: relative;
+        display: inline-block;
+        left: 0.5rem;
+        content: "\f078";
+        font-family: "Font Awesome 6 Free";
+        right: 1.5rem;
+        font-weight: 600;
+        font-size: 1.2rem;
+        color: variables.$logo-text;
+        transition: all 0.4s ease;
+    }
+    
+    &__menu-phonesubmenu{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+        overflow: auto;
+        visibility: hidden;
+        transform: scale(0);
+        transform-origin: 0% top;
+        gap: 2.3rem;
+        top: 5.6rem;
+        z-index: 999;
+        width: 120rem;
+        height: 40rem;
+        border-radius: 1rem;
+        border: 0.1rem solid #FFF0EC;
+        background: #FFF;
+        box-shadow: 0.3rem 0.8rem 1.5rem 0px rgba(215, 215, 215, 0.5);
+        transition: all 0.4s ease;
+    }
+    &__menu-phonenav > li:hover &__menu-phonesubmenu{
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+
+    }
+    &__menu-phonenav > li:hover > a::after{
+       position: relative;
+       display: inline-block;
+       transform: rotate(180deg);
+       color: #ED5A25;
+
+    }
+    &__menu-phonenav > li:hover > a{
+        transition: all 0.4s ease;
+    }
+    &__menu-phonenav > li:hover > a{
+       color: #ED5A25;
+
+    }
+    &__menu-phonesubmenu li {
+        margin-left: 4.8rem;
+        width: 24.3rem;
+        min-height: 2.8rem;
+        transition: all 0.4s ease;
+    }
+     &__menu-phonesubmenu li:first-child {
+        margin-top: 3.9rem;
+    }
+    &__menu-phonesubmenu > li:first-child > a::after{
+        position: relative;
+        display: inline-block;
+        left: 14.5rem;
+        content: "\f078";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 600;
+        font-size: 1.2rem;
+        color: variables.$logo-text;
+        transition: all 0.4s ease;
+    }
+    &__menu-phonesubmenu > li:first-child:hover > a::after{
+        position: relative;
+        display: inline-block;
+        transform: rotate(-90deg);
+        color: #ED5A25;
+    }
+    &__menu-phonesubmenu > li:nth-child(2) > a::after{
+        position: relative;
+        display: inline-block;
+        left: 9.1rem;
+        content: "\f078";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 600;
+        font-size: 1.2rem;
+        color: variables.$logo-text;
+        transition: all 0.4s ease;
+    }
+     &__menu-phonesubmenu > li:nth-child(2):hover > a::after{
+        position: relative;
+        display: inline-block;
+        transform: rotate(-90deg);
+        color: #ED5A25;
+    }
+    &__menu-phonesubmenu > li:nth-child(3) > a::after{
+        position: relative;
+        display: inline-block;
+        left: 8.6rem;
+        content: "\f078";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 600;
+        font-size: 1.2rem;
+        color: variables.$logo-text;
+        transition: all 0.4s ease;
+    }
+     &__menu-phonesubmenu > li:nth-child(3):hover > a::after{
+        position: relative;
+        display: inline-block;
+        transform: rotate(-90deg);
+        color: #ED5A25;
+    }
+    &__menu-phonesubmenu > li:nth-child(4) > a::after{
+        position: relative;
+        display: inline-block;
+        left: 7.3rem;
+        content: "\f078";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 600;
+        font-size: 1.2rem;
+        color: variables.$logo-text;
+        transition: all 0.4s ease;
+    }
+     &__menu-phonesubmenu > li:nth-child(4):hover > a::after{
+       position: relative;
+        display: inline-block;
+        transform: rotate(-90deg);
+        color: #ED5A25;
+    }
+    &__menu-phonesubmenu > li:last-child > a::after{
+        position: relative;
+        display: inline-block;
+        left: 15rem;
+        content: "\f078";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 600;
+        font-size: 1.2rem;
+        color: variables.$logo-text;
+        transition: all 0.4s ease;
+    }
+     &__menu-phonesubmenu > li:last-child:hover > a::after{
+        position: relative;
+        display: inline-block;
+        transform: rotate(-90deg);
+        color: #ED5A25;
+    }
+    &__menu-phonesubmenu a {
+        display: block;
+        height: 3.5rem;
+        padding-left: 0.6rem;
+        line-height: 3.5rem;
+        color: var(--Text-colors-01, #323232);
+        font-family: "Manrope";
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+    &__wrapper{
+        position: absolute;
+        top: -0.1rem;
+        left: 26%;
+        display: flex;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s ease;
+    }
+    &__menu-phonesubmenu > li:hover &__wrapper{
+        opacity: 1;
+        visibility: visible;
+    }
+    &__hotline{
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        gap: 0.8rem;
+        padding-right: 1.6rem;
+    }
+    &__hotline-icon{
+        width: 2.5rem;
+        height: 2.5rem;
+        border: 0.2rem solid variables.$color-hotline;
+        border-radius: 50%;
+        font-size: 1.2rem;
+        @include mixins.screen(md){
+            display: none;
+        }
+    }
+    &__menu-phonesubmenu li:hover{
+        background: var(--Primaries-and-grays-05, #F2F2F2);
+    }
+    &__hotline-icon::before{
+        position: relative;
+        top: 0.4rem;
+        left: 0.5rem;
+        content: "\f095";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 600;
+        font-size: 1.2rem;
+        color: variables.$logo-text;
+    }
+    &__hotline-text{
+        color: variables.$color-hotline;
+        font-family: "Quicksand";
+        font-size: 1.4rem;
+        font-weight: 600;
+        @include mixins.screen(md){
+            display: none;
+        }
+    }
+    &__search-menu{
+        @include mixins.screen(md){
+            display: block !important;
+        }
+    }
+    &__user-menu{
+        @include mixins.screen(md){
+            display: block !important;
+        }
+    }
+}
+// Start nav-wrapper
+.nav-wrapper{
+    @include mixins.screen(md){
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 999;
+            width: 85%;
+            translate: -101%;
+            color: #000;
+            background: #fff;
+            transition: all 0.4s ease;
+    }
+    @include mixins.screen(md){
+        &-image,
+        &-text,
+        .nav{
+            display: block;
+        }
+        &__logo{
+            display: flex;
+            align-items: center;
+            gap: 1.1rem;
+            margin-top: 2.8rem;
+            margin-left: 2.7rem;
+        }
+        &-text{
+            color: #404040;
+            font-family: "Poppins";
+            font-size: 2.3rem;
+            font-weight: 600;
+            line-height: 2.3rem;
+        }
+        &-highlight{
+            color: var(--Primary-Colors, #ED5A25);
+            font-family: "Poppins";
+            font-size: 2.3rem;
+            font-weight: 600;
+            line-height: 2.3rem;
+        }
+        &__dot{
+            width: 100%;
+            height: 0.1rem;
+            margin-top: 2rem;
+            background: #F2F2F2;
+        }
+        &--close{
+            flex: 1;
+            text-align: end;
+            font-size: 3.4rem;
+            margin-right: 2.7rem;
+            color: #787777;
+        }
+    }
+}
+.drapwer-open{
+    display: flex;
+}
+#drapwer:checked ~ .nav-wrapper{
+    translate: 0;
+}
+.drapwer-overlay{
+    @include mixins.screen(md){
+       display: block;
+       position: fixed;
+       inset: 0;
+       opacity: 0;
+       z-index: 998;
+       visibility: hidden;
+       background: rgba(0,0,0,0.6);
+       transition: all 0.4s ease;
+    }
+}
+#drapwer:checked ~ .drapwer-overlay{
+    opacity: 1;
+    visibility: visible;
+}
+// Start nav-menu
+.nav{
+    @include mixins.screen(md){
+        margin-left: 2.7rem;
+    }
+}
+.nav a{
+    @include mixins.screen(md){
+        color: var(--Color-Text-03, #565656);
+        font-family:"Quicksand";
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+}
+.nav  li:first-child{
+    @include mixins.screen(md){
+        margin-top: 2.8rem;
+    }
+}
+.nav li:first-child a::after{
+    @include mixins.screen(md){
+        position: relative;
+        display: inline-block;
+        content: "\f078";
+        font-family: "Font Awesome 6 Free";
+        right: -60%;
+        font-weight: 600;
+        font-size: 1.2rem;
+        color: #404040;
+        transition: all 0.4s ease;
+    }
+}
+.nav li:first-child:hover a::after,
+.nav li:nth-child(2):hover a::after,
+.nav li:last-child:hover a::after
+{
+    @include mixins.screen(md){
+        transform: rotate(-90deg);
+        color: #ED5A25;
+    }
+}
+.nav li:nth-child(2) a::after{
+    @include mixins.screen(md){
+        position: relative;
+        display: inline-block;
+        content: "\f078";
+        font-family: "Font Awesome 6 Free";
+        right: -72.3%;
+        font-weight: 600;
+        font-size: 1.2rem;
+        color: #404040;
+        transition: all 0.4s ease;
+    }
+}
+.nav li:last-child a::after{
+    @include mixins.screen(md){
+        position: relative;
+        display: inline-block;
+        content: "\f078";
+        font-family: "Font Awesome 6 Free";
+        right: -66%;
+        font-weight: 600;
+        font-size: 1.2rem;
+        color: #404040;
+        transition: all 0.4s ease;
+    }
+}

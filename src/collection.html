@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection</title>
+    <%- include("./partials/head.ejs") %>
+</head>
+<body>
+    <%- include("./partials/header.ejs") %>
+    <main>
+        <div class="content">
+            <div class="container">
+                <!-- Start breadcrumb -->
+                <div class="row offset-sm-0">
+                    <div class="col">
+                        <nav class="breadcrumb">
+                            <ul class="breadcrumb__list">
+                                <li class="breadcrumb__item">
+                                    <label for="voucher-open" class="voucher-check" hidden>
+                                        <span class="breadcrumb__icon">
+                                          <img src="./img/icon-sp.svg" alt="icon sp" hidden>
+                                        </span>
+                                    </label>
+                                    <input type="checkbox" id="voucher-open" hidden>
+                                    <div class="voucher-overlay" hidden=""></div>
+                                    <aside class="voucher-menu">
+                                        <div class="voucher-menu__header">
+                                            <h2 class="voucher-menu__title" id="voucher-menu__title" hidden>List Card voucher</h2>
+                                            <label for="voucher-open" class="voucher-menu__close" hidden>
+                                               <i class="fa-solid fa-xmark"></i>
+                                            </label>
+                                        </div>
+                                        <span class="voucher-menu__lines"></span>
+                                        <nav class="voucher-menu__nav">
+                                            <ul class="voucher-menu__list" hidden>
+                                                <li class="voucher-menu__item">
+                                                    <a href="#" class="voucher-menu__link">
+                                                        Mobile Game Cards 
+                                                        <span class="voucher-menu__count">5</span>
+                                                    </a>
+                                                </li>
+                                                <li class="voucher-menu__item">
+                                                    <a href="#" class="voucher-menu__link">Game Cards 
+                                                    <span class="voucher-menu__count">10</span></a>
+                                                </li>
+                                                <li class="voucher-menu__item">
+                                                    <a href="#" class="voucher-menu__link">Payment Cards 
+                                                    <span class="voucher-menu__count">12</span></a>
+                                                </li>
+                                                <li class="voucher-menu__item">
+                                                    <a href="#" class="voucher-menu__link">Payment Cards 
+                                                    <span class="voucher-menu__count">12</span></a>
+                                                </li>
+                                                <li class="voucher-menu__item">
+                                                    <a href="#" class="voucher-menu__link">Payment Cards 
+                                                    <span class="voucher-menu__count">12</span></a>
+                                                </li>
+                                                <li class="voucher-menu__item">
+                                                    <a href="#" class="voucher-menu__link">Payment Cards 
+                                                    <span class="voucher-menu__count">12</span></a>
+                                                </li>
+                                                <li class="voucher-menu__item">
+                                                    <a href="#" class="voucher-menu__link">Payment Cards 
+                                                    <span class="voucher-menu__count">12</span></a>
+                                                </li>
+                                                <li class="voucher-menu__item">
+                                                    <a href="#" class="voucher-menu__link">Payment Cards 
+                                                    <span class="voucher-menu__count">12</span></a>
+                                                </li>
+                                                <li class="voucher-menu__item">
+                                                    <a href="#" class="voucher-menu__link">Payment Cards 
+                                                    <span class="voucher-menu__count">12</span></a>
+                                                </li>
+                                                <li class="voucher-menu__item">
+                                                    <a href="#" class="voucher-menu__link">Payment Cards 
+                                                    <span class="voucher-menu__count">12</span></a>
+                                                </li>
+                                                <li class="voucher-menu__item">
+                                                    <a href="#" class="voucher-menu__link">Payment Cards 
+                                                    <span class="voucher-menu__count">12</span></a>
+                                                </li>
+                                                <li class="voucher-menu__item">
+                                                    <a href="#" class="voucher-menu__link">Payment Cards 
+                                                    <span class="voucher-menu__count">12</span></a>
+                                                </li>
+                                                <li class="voucher-menu__item">
+                                                    <a href="#" class="voucher-menu__link">Payment Cards 
+                                                    <span class="voucher-menu__count">12</span></a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </aside>
+                                    <a href="#" class="breadcrumb__link">
+                                        <span class="breadcrumb__text" hidden>Card Voucher</span>
+                                    </a>
+                                </li>
+                                <li class="breadcrumb__item">
+                                   <span class="breadcrumb__text-active" hidden>
+                                      Mobile card
+                                    </span>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!-- End breadcrumb -->
+                <div class="row row-cols-md-1">
+                    <div class="col col-3">
+                        <!-- Start product-menu -->
+                        <aside class="product-menu">
+                            <h2 class="product-menu__title">Danh mục sản phẩm</h2>
+                            <span class="product-menu__lines"></span>
+                            <nav class="product-menu__nav">
+                                <ul class="product-menu__list">
+                                    <li class="product-menu__item">
+                                        <a href="#" class="product-menu__link">Mobile Game Cards</a>
+                                    </li>
+                                    <li class="product-menu__item">
+                                        <a href="#" class="product-menu__link">Game Cards</a>
+                                    </li>
+                                    <li class="product-menu__item">
+                                        <a href="#" class="product-menu__link">Payment Cards</a>
+                                    </li>
+                                    <li class="product-menu__item">
+                                        <a href="#" class="product-menu__link">Gift Cards</a>
+                                    </li>
+                                    <li class="product-menu__item">
+                                        <a href="#" class="product-menu__link">Game Console</a>
+                                    </li>
+                                    <li class="product-menu__item">
+                                        <a href="#" class="product-menu__link">Game CD-Key</a>
+                                    </li>
+                                    <li class="product-menu__item">
+                                        <a href="#" class="product-menu__link">Video Streaming</a>
+                                    </li>
+                                    <li class="product-menu__item">
+                                        <a href="#" class="product-menu__link">Music</a>
+                                    </li>
+                                    <li class="product-menu__item">
+                                        <a href="#" class="product-menu__link">Shopping</a>
+                                    </li>
+                                    <li class="product-menu__item">
+                                        <a href="#" class="product-menu__link">Telco Prepaid Cards</a>
+                                    </li>
+                                    <li class="product-menu__item">
+                                        <a href="#" class="product-menu__link">Tools</a>
+                                    </li>
+                                    <li class="product-menu__item">
+                                        <a href="#" class="product-menu__link">Software</a>
+                                    </li>
+                                    <li class="product-menu__item">
+                                        <a href="#" class="product-menu__link">Social App</a>
+                                    </li>
+                                    <li class="product-menu__item">
+                                        <a href="#" class="product-menu__link">Freebie Codes</a>
+                                    </li>
+                                    <li class="product-menu__item">
+                                        <a href="#" class="product-menu__link">Subscript</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </aside>
+                        <!-- End product-menu -->
+
+                        <!-- Start price-filter -->
+                        <section class="price-filter">
+                            <h2 class="price-filter__title">Khoảng giá</h2>
+                            <span class="product-menu__lines"></span>
+                            <div class="price-filter__range">
+                                <input type="range" class="price-filter__slider" min="0" max="2000000" value="500000"/>
+                            </div>
+
+                            <p class="price-filter__display">Price: <strong>500.000 - 1.000.000</strong></p>
+                            
+                            <button class="price-filter__button">Lọc</button>
+                        </section>
+                        <!-- End price-filter -->
+
+                        <!-- Start rating-filter -->
+                        <section class="rating-filter">
+                            <h2 class="rating-filter__title">Đánh giá</h2>
+                            <span class="product-menu__lines"></span>
+                            <form class="rating-filter__form">
+                                <label for="checkbox--on-1" class="rating-filter__option">
+                                    <input type="checkbox" hidden id="checkbox--on-1">
+                                    <span class="rating-filter__stars">
+                                    <img src="./img/icon-color-star.svg" alt="icon-star" class="rating-filter__stars-img">
+                                    <img src="./img/icon-color-star.svg" alt="icon-star" class="rating-filter__stars-img">
+                                    <img src="./img/icon-color-star.svg" alt="icon-star" class="rating-filter__stars-img">
+                                    <img src="./img/icon-color-star.svg" alt="icon-star" class="rating-filter__stars-img">
+                                    <img src="./img/icon-color-star.svg" alt="icon-star" class="rating-filter__stars-img">
+                                    </span>
+                                    <span class="rating-filter__count">(120k)</span>
+                                </label>
+                                <label for="checkbox--on-2" class="rating-filter__option">
+                                    <input type="checkbox" hidden id="checkbox--on-2">
+                                    <span class="rating-filter__stars">
+                                    <img src="./img/icon-color-star.svg" alt="icon-star" class="rating-filter__stars-img">
+                                    <img src="./img/icon-color-star.svg" alt="icon-star" class="rating-filter__stars-img">
+                                    <img src="./img/icon-color-star.svg" alt="icon-star" class="rating-filter__stars-img">
+                                    <img src="./img/icon-color-star.svg" alt="icon-star" class="rating-filter__stars-img">
+                                    <img src="./img/icon-star.svg" alt="icon-star" class="rating-filter__stars-img">
+                                    </span>
+                                    <span class="rating-filter__count">(120k)</span>
+                                </label>
+                                <label for="checkbox--on-3" class="rating-filter__option">
+                                    <input type="checkbox" hidden id="checkbox--on-3">
+                                    <span class="rating-filter__stars">
+                                    <img src="./img/icon-color-star.svg" alt="icon-star" class="rating-filter__stars-img">
+                                    <img src="./img/icon-color-star.svg" alt="icon-star" class="rating-filter__stars-img">
+                                    <img src="./img/icon-color-star.svg" alt="icon-star" class="rating-filter__stars-img">
+                                    <img src="./img/icon-star.svg" alt="icon-star" class="rating-filter__stars-img">
+                                    <img src="./img/icon-star.svg" alt="icon-star" class="rating-filter__stars-img">
+                                    </span>
+                                    <span class="rating-filter__count">(120k)</span>
+                                </label>
+                                <label for="checkbox--on-4" class="rating-filter__option">
+                                    <input type="checkbox" hidden id="checkbox--on-4">
+                                    <span class="rating-filter__stars">
+                                    <img src="./img/icon-color-star.svg" alt="icon-star" class="rating-filter__stars-img">
+                                    <img src="./img/icon-color-star.svg" alt="icon-star" class="rating-filter__stars-img">
+                                    <img src="./img/icon-star.svg" alt="icon-star" class="rating-filter__stars-img">
+                                    <img src="./img/icon-star.svg" alt="icon-star" class="rating-filter__stars-img">
+                                    <img src="./img/icon-star.svg" alt="icon-star" class="rating-filter__stars-img">
+                                    </span>
+                                    <span class="rating-filter__count">(120k)</span>
+                                </label>
+                                <label for="checkbox--on-5" class="rating-filter__option">
+                                    <input type="checkbox" hidden id="checkbox--on-5">
+                                    <span class="rating-filter__stars">
+                                    <img src="./img/icon-color-star.svg" alt="icon-star" class="rating-filter__stars-img">
+                                    <img src="./img/icon-star.svg" alt="icon-star" class="rating-filter__stars-img">
+                                    <img src="./img/icon-star.svg" alt="icon-star" class="rating-filter__stars-img">
+                                    <img src="./img/icon-star.svg" alt="icon-star" class="rating-filter__stars-img">
+                                    <img src="./img/icon-star.svg" alt="icon-star" class="rating-filter__stars-img">
+                                    </span>
+                                    <span class="rating-filter__count">(120k)</span>
+                                </label>
+                            </form>
+                        </section>
+                        <!-- End rating-filter -->
+
+                        <!-- Start brand-filter -->
+                        <section class="brand-filter">
+                            <h2 class="brand-filter__title">Thương hiệu</h2>
+                            <span class="product-menu__lines"></span>
+                            <form class="brand-filter__form">
+                                <label for="checkbox-apple" class="brand-filter__option">
+                                    <input type="checkbox" class="brand-filter__checkbox" id="checkbox-apple" hidden />
+                                    <span class="brand-filter__label">Apple</span>
+                                </label>
+
+                                <label for="checkbox-google" class="brand-filter__option">
+                                    <input type="checkbox" class="brand-filter__checkbox" id="checkbox-google" hidden />
+                                    <span class="brand-filter__label">Google</span>
+                                </label>
+
+                                <label for="checkbox-Microsoft" class="brand-filter__option">
+                                    <input type="checkbox" class="brand-filter__checkbox" id="checkbox-Microsoft" hidden />
+                                    <span class="brand-filter__label">Microsoft</span>
+                                </label>
+
+                                <label for="checkbox-Amazon" class="brand-filter__option">
+                                    <input type="checkbox" class="brand-filter__checkbox" id="checkbox-Amazon" hidden />
+                                    <span class="brand-filter__label">Amazon</span>
+                                </label>
+
+                                <label for="checkbox-McDonald’s" class="brand-filter__option">
+                                    <input type="checkbox" class="brand-filter__checkbox" id="checkbox-McDonald’s" hidden />
+                                    <span class="brand-filter__label">McDonald’s</span>
+                                </label>
+
+                                <label for="checkbox-Visa" class="brand-filter__option">
+                                    <input type="checkbox" class="brand-filter__checkbox" id="checkbox-Visa" hidden />
+                                    <span class="brand-filter__label">Visa</span>
+                                </label>
+
+                                <label for="checkbox-Tencen" class="brand-filter__option">
+                                    <input type="checkbox" class="brand-filter__checkbox" id="checkbox-Tencen" hidden />
+                                    <span class="brand-filter__label">Tencent</span>
+                                </label>
+
+                                <label for="checkbox-Vuitton" class="brand-filter__option">
+                                    <input type="checkbox" class="brand-filter__checkbox" id="checkbox-Vuitton" hidden />
+                                    <span class="brand-filter__label">Louis Vuitton</span>
+                                </label>
+
+                                <label for="checkbox-MasterCard" class="brand-filter__option">
+                                    <input type="checkbox" class="brand-filter__checkbox" id="checkbox-MasterCard" hidden />
+                                    <span class="brand-filter__label">MasterCard</span>
+                                </label>
+
+                                <label for="checkbox-Cola" class="brand-filter__option">
+                                    <input type="checkbox" class="brand-filter__checkbox" id="checkbox-Cola" hidden />
+                                    <span class="brand-filter__label">Coca-Cola</span>
+                                </label>
+
+                            </form>
+                        </section>
+                        <!-- End brand-filter -->
+                        <!-- Start promo-card -->
+                        <article class="promo-card">
+                            <img 
+                                src="./img/heart-icon.png" 
+                                alt="Card voucher hot news with gift boxes and balloon" 
+                                class="promo-card__image"
+                            />
+
+                            <h3 class="promo-card__title">Card voucher hot news</h3>
+
+                            <a href="#" class="promo-card__button">
+                                View all 
+                                <span class="promo-card__icon"> 
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </span>
+                            </a>
+                        </article>
+                        <!-- End promo-card -->
+                    </div>
+                    <div class="col col-9 col-md-12">
+                        <div class="row offset-xxl-1 offset-xl-2 offset-lg-3 offset-md-0  offset-sm-0">
+                            <div class="col">
+                                <div class="header-product">
+                                    <p class="header-product__text">Showing 1-12 </p>
+                                </div>
+                            </div>
+                        </div>
+                          <!-- Start Row product listing -->
+                          <div class="row row-cols-xxl-3 row-cols-xl-2 row-cols-lg-2 offset-xxl-1 offset-xl-2 offset-lg-3 offset-md-0">
+                              <div class="col gy-3">
+                                  <!-- Start courses item -->
+                                      <article class="product-card">
+                                          <div class="product-card__image-wrapper">
+                                              <i class="product-card__icon fa-regular fa-heart"></i>
+                                              <a href="#!" class="product-card__thumb-link">
+                                              <img src="./img/product-card-1.png" alt="Target Gift Card 50$" class="product-card__thumb">
+                                              </a>
+                                          </div>
+                                          <div class="product-card__info">
+                                              <h3 class="product-card__title">
+                                              <a href="#!">Target Gift Card 50$ (US) – Order</a>
+                                              </h3>
+                                              <p class="product-card__price">120.000 ~ 134.000</p>
+                                              <div class="product-card__bottom">
+                                                  <i class="fa-solid fa-cart-plus"></i>
+                                                  <button class="product-card__btn">Mua ngay</button>
+                                              </div>
+                                          </div>
+                                      </article>
+                                  <!-- End courses item -->
+                              </div>
+                              <div class="col gy-3">
+                                  <!-- Start courses item -->
+                                      <article class="product-card">
+                                          <div class="product-card__image-wrapper">
+                                              <i class="product-card__icon fa-regular fa-heart"></i>
+                                              <a href="#!" class="product-card__thumb-link">
+                                              <img src="./img/product-card-2.png" alt="Target Gift Card 50$" class="product-card__thumb">
+                                              </a>
+                                          </div>
+                                          <div class="product-card__info">
+                                              <h3 class="product-card__title">
+                                              <a href="#!">Target Gift Card 50$ (US) – Order</a>
+                                              </h3>
+                                              <p class="product-card__price">120.000 ~ 134.000</p>
+                                              <div class="product-card__bottom">
+                                                  <i class="fa-solid fa-cart-plus"></i>
+                                                  <button class="product-card__btn">Mua ngay</button>
+                                              </div>
+                                          </div>
+                                      </article>
+                                  <!-- End courses item -->
+                              </div>
+                              <div class="col gy-3">
+                                  <!-- Start courses item -->
+                                      <article class="product-card">
+                                          <div class="product-card__image-wrapper">
+                                              <i class="product-card__icon fa-regular fa-heart"></i>
+                                              <a href="#!" class="product-card__thumb-link">
+                                              <img src="./img/product-card-3.png" alt="Target Gift Card 50$" class="product-card__thumb">
+                                              </a>
+                                          </div>
+                                          <div class="product-card__info">
+                                              <h3 class="product-card__title">
+                                              <a href="#!">Target Gift Card 50$ (US) – Order</a>
+                                              </h3>
+                                              <p class="product-card__price">120.000 ~ 134.000</p>
+                                              <div class="product-card__bottom">
+                                                  <i class="fa-solid fa-cart-plus"></i>
+                                                  <button class="product-card__btn">Mua ngay</button>
+                                              </div>
+                                          </div>
+                                      </article>
+                                  <!-- End courses item -->
+                              </div>
+                              <div class="col gy-3">
+                                  <!-- Start courses item -->
+                                      <article class="product-card">
+                                          <div class="product-card__image-wrapper">
+                                              <i class="product-card__icon fa-regular fa-heart"></i>
+                                              <a href="#!" class="product-card__thumb-link">
+                                              <img src="./img/product-card-4.png" alt="Target Gift Card 50$" class="product-card__thumb">
+                                              </a>
+                                          </div>
+                                          <div class="product-card__info">
+                                              <h3 class="product-card__title">
+                                              <a href="#!">Target Gift Card 50$ (US) – Order</a>
+                                              </h3>
+                                              <p class="product-card__price">120.000 ~ 134.000</p>
+                                              <div class="product-card__bottom">
+                                                  <i class="fa-solid fa-cart-plus"></i>
+                                                  <button class="product-card__btn">Mua ngay</button>
+                                              </div>
+                                          </div>
+                                      </article>
+                                  <!-- End courses item -->
+                              </div>
+                              <div class="col gy-2">
+                                  <!-- Start courses item -->
+                                      <article class="product-card">
+                                          <div class="product-card__image-wrapper">
+                                              <i class="product-card__icon fa-regular fa-heart"></i>
+                                              <a href="#!" class="product-card__thumb-link">
+                                              <img src="./img/product-card-5.png" alt="Target Gift Card 50$" class="product-card__thumb">
+                                              </a>
+                                          </div>
+                                          <div class="product-card__info">
+                                              <h3 class="product-card__title">
+                                              <a href="#!">Target Gift Card 50$ (US) – Order</a>
+                                              </h3>
+                                              <p class="product-card__price">120.000 ~ 134.000</p>
+                                              <div class="product-card__bottom">
+                                                  <i class="fa-solid fa-cart-plus"></i>
+                                                  <button class="product-card__btn">Mua ngay</button>
+                                              </div>
+                                          </div>
+                                      </article>
+                                  <!-- End courses item -->
+                              </div>
+                              <div class="col gy-2">
+                                  <!-- Start courses item -->
+                                      <article class="product-card">
+                                          <div class="product-card__image-wrapper">
+                                              <i class="product-card__icon fa-regular fa-heart"></i>
+                                              <a href="#!" class="product-card__thumb-link">
+                                              <img src="./img/product-card-6.png" alt="Target Gift Card 50$" class="product-card__thumb">
+                                              </a>
+                                          </div>
+                                          <div class="product-card__info">
+                                              <h3 class="product-card__title">
+                                              <a href="#!">Target Gift Card 50$ (US) – Order</a>
+                                              </h3>
+                                              <p class="product-card__price">120.000 ~ 134.000</p>
+                                              <div class="product-card__bottom">
+                                                  <i class="fa-solid fa-cart-plus"></i>
+                                                  <button class="product-card__btn">Mua ngay</button>
+                                              </div>
+                                          </div>
+                                      </article>
+                                  <!-- End courses item -->
+                              </div>
+                              <div class="col gy-2">
+                                  <!-- Start courses item -->
+                                      <article class="product-card">
+                                          <div class="product-card__image-wrapper">
+                                              <i class="product-card__icon fa-regular fa-heart"></i>
+                                              <a href="#!" class="product-card__thumb-link">
+                                              <img src="./img/product-card-7.png" alt="Target Gift Card 50$" class="product-card__thumb">
+                                              </a>
+                                          </div>
+                                          <div class="product-card__info">
+                                              <h3 class="product-card__title">
+                                              <a href="#!">Target Gift Card 50$ (US) – Order</a>
+                                              </h3>
+                                              <p class="product-card__price">120.000 ~ 134.000</p>
+                                              <div class="product-card__bottom">
+                                                  <i class="fa-solid fa-cart-plus"></i>
+                                                  <button class="product-card__btn">Mua ngay</button>
+                                              </div>
+                                          </div>
+                                      </article>
+                                  <!-- End courses item -->
+                              </div>
+                              <div class="col gy-2">
+                                  <!-- Start courses item -->
+                                      <article class="product-card">
+                                          <div class="product-card__image-wrapper">
+                                              <i class="product-card__icon fa-regular fa-heart"></i>
+                                              <a href="#!" class="product-card__thumb-link">
+                                              <img src="./img/product-card-5.png" alt="Target Gift Card 50$" class="product-card__thumb">
+                                              </a>
+                                          </div>
+                                          <div class="product-card__info">
+                                              <h3 class="product-card__title">
+                                              <a href="#!">Target Gift Card 50$ (US) – Order</a>
+                                              </h3>
+                                              <p class="product-card__price">120.000 ~ 134.000</p>
+                                              <div class="product-card__bottom">
+                                                  <i class="fa-solid fa-cart-plus"></i>
+                                                  <button class="product-card__btn">Mua ngay</button>
+                                              </div>
+                                          </div>
+                                      </article>
+                                  <!-- End courses item -->
+                              </div>
+                               <div class="col gy-2">
+                                  <!-- Start courses item -->
+                                      <article class="product-card">
+                                          <div class="product-card__image-wrapper">
+                                              <i class="product-card__icon fa-regular fa-heart"></i>
+                                              <a href="#!" class="product-card__thumb-link">
+                                              <img src="./img/product-card-5.png" alt="Target Gift Card 50$" class="product-card__thumb">
+                                              </a>
+                                          </div>
+                                          <div class="product-card__info">
+                                              <h3 class="product-card__title">
+                                              <a href="#!">Target Gift Card 50$ (US) – Order</a>
+                                              </h3>
+                                              <p class="product-card__price">120.000 ~ 134.000</p>
+                                              <div class="product-card__bottom">
+                                                  <i class="fa-solid fa-cart-plus"></i>
+                                                  <button class="product-card__btn">Mua ngay</button>
+                                              </div>
+                                          </div>
+                                      </article>
+                                  <!-- End courses item -->
+                              </div>
+                               <div class="col gy-2 ">
+                                  <!-- Start courses item -->
+                                      <article class="product-card">
+                                          <div class="product-card__image-wrapper">
+                                              <i class="product-card__icon fa-regular fa-heart"></i>
+                                              <a href="#!" class="product-card__thumb-link">
+                                              <img src="./img/product-card-5.png" alt="Target Gift Card 50$" class="product-card__thumb">
+                                              </a>
+                                          </div>
+                                          <div class="product-card__info">
+                                              <h3 class="product-card__title">
+                                              <a href="#!">Target Gift Card 50$ (US) – Order</a>
+                                              </h3>
+                                              <p class="product-card__price">120.000 ~ 134.000</p>
+                                              <div class="product-card__bottom">
+                                                  <i class="fa-solid fa-cart-plus"></i>
+                                                  <button class="product-card__btn">Mua ngay</button>
+                                              </div>
+                                          </div>
+                                      </article>
+                                  <!-- End courses item -->
+                              </div>
+                               <div class="col gy-2">
+                                  <!-- Start courses item -->
+                                      <article class="product-card">
+                                          <div class="product-card__image-wrapper">
+                                              <i class="product-card__icon fa-regular fa-heart"></i>
+                                              <a href="#!" class="product-card__thumb-link">
+                                              <img src="./img/product-card-1.png" alt="Target Gift Card 50$" class="product-card__thumb">
+                                              </a>
+                                          </div>
+                                          <div class="product-card__info">
+                                              <h3 class="product-card__title">
+                                              <a href="#!">Target Gift Card 50$ (US) – Order</a>
+                                              </h3>
+                                              <p class="product-card__price">120.000 ~ 134.000</p>
+                                              <div class="product-card__bottom">
+                                                  <i class="fa-solid fa-cart-plus"></i>
+                                                  <button class="product-card__btn">Mua ngay</button>
+                                              </div>
+                                          </div>
+                                      </article>
+                                  <!-- End courses item -->
+                              </div>
+                               <div class="col gy-2">
+                                  <!-- Start courses item -->
+                                      <article class="product-card">
+                                          <div class="product-card__image-wrapper">
+                                              <i class="product-card__icon fa-regular fa-heart"></i>
+                                              <a href="#!" class="product-card__thumb-link">
+                                              <img src="./img/product-card-1.png" alt="Target Gift Card 50$" class="product-card__thumb">
+                                              </a>
+                                          </div>
+                                          <div class="product-card__info">
+                                              <h3 class="product-card__title">
+                                              <a href="#!">Target Gift Card 50$ (US) – Order</a>
+                                              </h3>
+                                              <p class="product-card__price">120.000 ~ 134.000</p>
+                                              <div class="product-card__bottom">
+                                                  <i class="fa-solid fa-cart-plus"></i>
+                                                  <button class="product-card__btn">Mua ngay</button>
+                                              </div>
+                                          </div>
+                                      </article>
+                                  <!-- End courses item -->
+                              </div>
+                               <div class="col gy-2">
+                                  <!-- Start courses item -->
+                                      <article class="product-card">
+                                          <div class="product-card__image-wrapper">
+                                              <i class="product-card__icon fa-regular fa-heart"></i>
+                                              <a href="#!" class="product-card__thumb-link">
+                                              <img src="./img/product-card-1.png" alt="Target Gift Card 50$" class="product-card__thumb">
+                                              </a>
+                                          </div>
+                                          <div class="product-card__info">
+                                              <h3 class="product-card__title">
+                                              <a href="#!">Target Gift Card 50$ (US) – Order</a>
+                                              </h3>
+                                              <p class="product-card__price">120.000 ~ 134.000</p>
+                                              <div class="product-card__bottom">
+                                                  <i class="fa-solid fa-cart-plus"></i>
+                                                  <button class="product-card__btn">Mua ngay</button>
+                                              </div>
+                                          </div>
+                                      </article>
+                                  <!-- End courses item -->
+                              </div>
+                               <div class="col gy-2">
+                                  <!-- Start courses item -->
+                                      <article class="product-card">
+                                          <div class="product-card__image-wrapper">
+                                              <i class="product-card__icon fa-regular fa-heart"></i>
+                                              <a href="#!" class="product-card__thumb-link">
+                                              <img src="./img/product-card-1.png" alt="Target Gift Card 50$" class="product-card__thumb">
+                                              </a>
+                                          </div>
+                                          <div class="product-card__info">
+                                              <h3 class="product-card__title">
+                                              <a href="#!">Target Gift Card 50$ (US) – Order</a>
+                                              </h3>
+                                              <p class="product-card__price">120.000 ~ 134.000</p>
+                                              <div class="product-card__bottom">
+                                                  <i class="fa-solid fa-cart-plus"></i>
+                                                  <button class="product-card__btn">Mua ngay</button>
+                                              </div>
+                                          </div>
+                                      </article>
+                                  <!-- End courses item -->
+                              </div>
+                               <div class="col gy-2">
+                                  <!-- Start courses item -->
+                                      <article class="product-card">
+                                          <div class="product-card__image-wrapper">
+                                              <i class="product-card__icon fa-regular fa-heart"></i>
+                                              <a href="#!" class="product-card__thumb-link">
+                                              <img src="./img/product-card-1.png" alt="Target Gift Card 50$" class="product-card__thumb">
+                                              </a>
+                                          </div>
+                                          <div class="product-card__info">
+                                              <h3 class="product-card__title">
+                                              <a href="#!">Target Gift Card 50$ (US) – Order</a>
+                                              </h3>
+                                              <p class="product-card__price">120.000 ~ 134.000</p>
+                                              <div class="product-card__bottom">
+                                                  <i class="fa-solid fa-cart-plus"></i>
+                                                  <button class="product-card__btn">Mua ngay</button>
+                                              </div>
+                                          </div>
+                                      </article>
+                                  <!-- End courses item -->
+                              </div>
+                               <div class="col gy-2">
+                                  <!-- Start courses item -->
+                                      <article class="product-card">
+                                          <div class="product-card__image-wrapper">
+                                              <i class="product-card__icon fa-regular fa-heart"></i>
+                                              <a href="#!" class="product-card__thumb-link">
+                                              <img src="./img/product-card-1.png" alt="Target Gift Card 50$" class="product-card__thumb">
+                                              </a>
+                                          </div>
+                                          <div class="product-card__info">
+                                              <h3 class="product-card__title">
+                                              <a href="#!">Target Gift Card 50$ (US) – Order</a>
+                                              </h3>
+                                              <p class="product-card__price">120.000 ~ 134.000</p>
+                                              <div class="product-card__bottom">
+                                                  <i class="fa-solid fa-cart-plus"></i>
+                                                  <button class="product-card__btn">Mua ngay</button>
+                                              </div>
+                                          </div>
+                                      </article>
+                                  <!-- End courses item -->
+                              </div>
+                               <div class="col gy-2">
+                                  <!-- Start courses item -->
+                                      <article class="product-card">
+                                          <div class="product-card__image-wrapper">
+                                              <i class="product-card__icon fa-regular fa-heart"></i>
+                                              <a href="#!" class="product-card__thumb-link">
+                                              <img src="./img/product-card-1.png" alt="Target Gift Card 50$" class="product-card__thumb">
+                                              </a>
+                                          </div>
+                                          <div class="product-card__info">
+                                              <h3 class="product-card__title">
+                                              <a href="#!">Target Gift Card 50$ (US) – Order</a>
+                                              </h3>
+                                              <p class="product-card__price">120.000 ~ 134.000</p>
+                                              <div class="product-card__bottom">
+                                                  <i class="fa-solid fa-cart-plus"></i>
+                                                  <button class="product-card__btn">Mua ngay</button>
+                                              </div>
+                                          </div>
+                                      </article>
+                                  <!-- End courses item -->
+                              </div>
+                               <div class="col gy-2">
+                                  <!-- Start courses item -->
+                                      <article class="product-card">
+                                          <div class="product-card__image-wrapper">
+                                              <i class="product-card__icon fa-regular fa-heart"></i>
+                                              <a href="#!" class="product-card__thumb-link">
+                                              <img src="./img/product-card-1.png" alt="Target Gift Card 50$" class="product-card__thumb">
+                                              </a>
+                                          </div>
+                                          <div class="product-card__info">
+                                              <h3 class="product-card__title">
+                                              <a href="#!">Target Gift Card 50$ (US) – Order</a>
+                                              </h3>
+                                              <p class="product-card__price">120.000 ~ 134.000</p>
+                                              <div class="product-card__bottom">
+                                                  <i class="fa-solid fa-cart-plus"></i>
+                                                  <button class="product-card__btn">Mua ngay</button>
+                                              </div>
+                                          </div>
+                                      </article>
+                                  <!-- End courses item -->
+                              </div>
+                               <div class="col gy-2">
+                                  <!-- Start courses item -->
+                                      <article class="product-card">
+                                          <div class="product-card__image-wrapper">
+                                              <i class="product-card__icon fa-regular fa-heart"></i>
+                                              <a href="#!" class="product-card__thumb-link">
+                                              <img src="./img/product-card-1.png" alt="Target Gift Card 50$" class="product-card__thumb">
+                                              </a>
+                                          </div>
+                                          <div class="product-card__info">
+                                              <h3 class="product-card__title">
+                                              <a href="#!">Target Gift Card 50$ (US) – Order</a>
+                                              </h3>
+                                              <p class="product-card__price">120.000 ~ 134.000</p>
+                                              <div class="product-card__bottom">
+                                                  <i class="fa-solid fa-cart-plus"></i>
+                                                  <button class="product-card__btn">Mua ngay</button>
+                                              </div>
+                                          </div>
+                                      </article>
+                                  <!-- End courses item -->
+                              </div>
+                               <div class="col gy-2">
+                                  <!-- Start courses item -->
+                                      <article class="product-card">
+                                          <div class="product-card__image-wrapper">
+                                              <i class="product-card__icon fa-regular fa-heart"></i>
+                                              <a href="#!" class="product-card__thumb-link">
+                                              <img src="./img/product-card-1.png" alt="Target Gift Card 50$" class="product-card__thumb">
+                                              </a>
+                                          </div>
+                                          <div class="product-card__info">
+                                              <h3 class="product-card__title">
+                                              <a href="#!">Target Gift Card 50$ (US) – Order</a>
+                                              </h3>
+                                              <p class="product-card__price">120.000 ~ 134.000</p>
+                                              <div class="product-card__bottom">
+                                                  <i class="fa-solid fa-cart-plus"></i>
+                                                  <button class="product-card__btn">Mua ngay</button>
+                                              </div>
+                                          </div>
+                                      </article>
+                                  <!-- End courses item -->
+                              </div>
+                          </div>
+                          <!-- End Start Row product listing-->
+                           <!-- Start pagination -->
+                          <div class="row">
+                            <div class="col">
+                                <nav class="pagination">
+                                    <ul class="pagination__list">
+                                        <li class="pagination__item">
+                                           <button class="pagination__arrow">
+                                            <i class="fa-solid fa-arrow-left"></i>
+                                           </button>
+                                        </li>
+                                        <li class="pagination__item">
+                                           <button class="pagination__button pagination__button--active">1</button>
+                                        </li>
+                                        <li class="pagination__item">
+                                           <button class="pagination__button">2</button>
+                                        </li>
+                                        <li class="pagination__item">
+                                           <button class="pagination__button">3</button>
+                                        </li>
+                                        <li class="pagination__item">
+                                           <button class="pagination__button">4</button>
+                                        </li>
+                                        <li class="pagination__item">
+                                           <button class="pagination__arrow">
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                           </button>
+                                        </li>
+                                    </ul>
+                                </nav>
+                               <!-- End pagination -->
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </main>
+     <%- include("./partials/footer.ejs") %>
+     <script type="module" src="./main.js"></script>
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     <script>
+       AOS.init();
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+@use "/scss/mixins";
+@use "../variables";
+
+.footer{
+    margin-top: 5rem;
+    background: variables.$color-header;
+    overflow: hidden;
+    &__container{
+        margin-top: 6.1rem  ;
+    }
+    &__title{
+        color: variables.$color-title;
+        font-family: "Manrope";
+        font-size: 2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    &__link{
+        color: variables.$color-title;  
+        font-family: "Inter";
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    &__section--follow{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        @include mixins.screen(lg){
+            align-items: start;
+        }
+    }
+    &__section--payment{
+        width: 24.7rem;
+    }
+    &__payment-logo{
+        display: flex;
+        // width: 242px;
+        align-items: flex-start;
+        align-content: flex-start;
+        gap: 0.6rem;
+        flex-wrap: wrap;
+    }
+    &__payment-logo-paypal,
+    &__payment-logo-visa,
+    &__payment-logo-gpa,
+    &__payment-logo-shb,
+    &__payment-logo-sgb,
+    &__payment-logo-cod
+    {
+        padding: 1rem;
+        border-radius: 5px;
+        border: 0.1rem solid var(--Greys-Colors-06, #d7d7d7);
+        background: variables.$color-header;
+    } 
+    &__payment-logo-cod{
+        width: 7.5rem;
+        padding: 0;
+    }
+    &__social-list{
+        display: flex;
+        flex-direction: column;
+        gap: 0.9rem;
+    }
+    &__social-item{
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+    }
+    // Start footer bottom
+    &__bottom{
+        margin-top: 6.9rem  ;
+    }
+    &__text{
+        color:variables.$color-title;
+        font-family: "Inter";
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    &__certification-logos{
+        display: flex;
+        align-items: center;
+        gap: 3.5rem;
+    }
+    &__copy{
+        background: #FFF4F1;
+        height: 5rem;
+        line-height: 5rem;
+    }
+    &__copyright{
+       margin-top: 3rem;
+       text-align: center;
+    }
+    &__copy-text{
+        color: #909090;
+        font-family: "Inter";
+        font-size: 1.5rem;
+    }
+}

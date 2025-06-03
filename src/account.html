@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <%- include("./partials/head.ejs") %>
+</head>
+<body>
+    <%- include("./partials/header.ejs") %>
+    <main class="account">
+        <div class="row">
+            <div class="col">
+                <div class="accout-header">
+                    <span class="accout-header__circle accout-header__circle--large"></span>
+                    <span class="accout-header__circle accout-header__circle-large__in"></span>
+                    <span class="accout-header__circle accout-header__circle--medium"></span>
+                    <span class="accout-header__circle accout-header__circle-medium__in"></span>
+                    <span class="accout-header__circle accout-header__circle--small"></span>
+                    <span class="accout-header__circle accout-header__circle-small__in"></span>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="account__wrapper row row-cols-xl-2 row-cols-md-1">
+                    <div class="col">
+                        <section class="account__sidebar">
+                            <header class="account__user-info">
+                                <figure class="user-info__avatar">
+                                    <img src="./img/account-avatar.svg" alt="Ảnh đại diện" />
+                                    <label for="avatarInput" class="user-info__camera">
+                                        <span class="user-info__avatar-icon">
+                                            <i class="fa-solid fa-camera"></i>
+                                        </span>
+                                    </label>
+                                     <input type="file" id="avatarInput" accept="image/*" hidden>
+                                </figure>
+                                <h2 class="user-info__name">Nguyễn Xuân Việt</h2>
+                                <span class="user-info__label">Thông tin tài khoản</span>
+                                <span class="user-info__lines"></span>
+                            </header>
+                            <nav class="account__navigation">
+                                <ul class="account-navigation__list">
+                                    <li class="account-navigation__item account-navigation__item--active">
+                                       <i class="fa-solid fa-circle-user"></i>
+                                       <a href="#!" class="account-navigation__link">Tài khoản</a>
+                                    </li>
+                                    <li class="account-navigation__item">
+                                        <i class="fa-solid fa-clock-rotate-left"></i>
+                                       <a href="#!" class="account-navigation__link">Lịch sử mua hàng</a>
+                                    </li>
+                                    <li class="account-navigation__item">
+                                        <i class="fa-solid fa-clock-rotate-left"></i>
+                                       <a href="#!" class="account-navigation__link">Nạp tiền & Rút tiền</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </section>
+                    </div>
+                    <div class="col gy-md-3">
+                        <section class="account__overview">
+                            <h1 class="overview__title">Tổng quan tài khoản</h1>
+                            <div class="overview__content">
+                                <article class="balance">
+                                    <h2 class="balance__title">Số dư hiện tại</h2>
+                                    <span class="balance__lines"></span>
+                                    <div class="balance__wrapper">
+                                        <div class="balance__left">
+                                            <img src="./img/coin.svg" alt="coin">
+                                            <p class="balance__amount">18.000đ</p>
+                                        </div>
+                                        <button class="balance__topup-button">Nạp tiền</button>
+                                    </div>
+                                </article>
+                                <article class="purchase-history">
+                                    <header class="purchase-history__header">
+                                        <h2 class="purchase-history__title">Lịch sử mua hàng</h2>
+                                        <a href="#" class="purchase-history__link">Xem thêm</a>
+                                    </header>
+                                    <ul class="purchase-history__stats">
+                                        <li class="purchase-history__stat">
+                                            <strong>12</strong>
+                                            <span>Chờ xử lý</span>
+                                        </li>
+                                        <li class="purchase-history__stat">
+                                            <strong>8</strong>
+                                            <span>Đang xử lý</span>
+                                        </li>
+                                        <li class="purchase-history__stat">
+                                            <strong>8</strong>
+                                            <span>Hoàn thành</span>
+                                        </li>
+                                        <li class="purchase-history__stat">
+                                            <strong>8</strong>
+                                            <span>Bị huỷ</span>
+                                        </li>
+                                    </ul>
+                                </article>
+                            </div>
+                        </section>
+                    </div>
+            </div>
+        </div>
+    </main>
+    <%- include("./partials/footer.ejs") %>
+    <script type="module" src="./main.js"></script>
+</body>
+</html>

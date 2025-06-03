@@ -1,0 +1,375 @@
+@use "/scss/mixins";
+.accout-header{
+    position: relative;
+    overflow: hidden;
+    height: 22.8rem;
+    background: #FFE7E0;
+
+    &__circle--large{
+        position: absolute;
+        top: -7.4rem;
+        left: -36.5rem;
+        width: 61rem;
+        height: 66rem;
+        transform: rotate(-1.182deg);
+        border-radius: 66rem;
+        background: #FFDCD2;
+    }
+    &__circle-large__in{
+        position: absolute;
+        top: 0.6rem;
+        left: -21.5rem;
+        width: 38rem;
+        height: 40rem;
+        transform: rotate(70.019deg);
+        border-radius: 46rem;
+        background: #FFE7E0;
+    }
+    &__circle--medium{
+        position: absolute;
+        top: -13.6rem;
+        left: 42%;
+        width: 23rem;
+        height: 25rem;
+        border-radius: 66rem;
+        transform: rotate(-1.182deg);
+        background: #FFDCD2;
+    }
+    &__circle-medium__in{
+        position: absolute;
+        top: -101px;
+        left: 44%;
+        width: 17rem;
+        height: 15rem;
+        transform: rotate(70.019deg);
+        border-radius: 46rem;
+        background: #FFE7E0;
+    }
+    &__circle--small{
+        position: absolute;
+        top: -23rem;
+        right: -21.8rem;
+        width: 53.2rem;
+        height: 62.4rem;
+        border-radius: 66rem;
+        transform: rotate(22.888deg);
+        background: #FFDBD0;
+    }
+    &__circle-small__in{
+        position: absolute;
+        top: 92px;
+        right: -109px;
+        width: 43.5rem;
+        height: 35rem;
+        border-radius: 46rem;
+        transform: rotate(94.295deg);
+        background: #FFE7E0;
+    }
+}
+// Start account
+.account{
+    &__sidebar{
+        position: relative;
+        top: -8rem;
+        height: 62.8rem;
+        border-radius: 2rem;
+        border: 0.1rem solid var(--Greys-Colors-05, #E5E5E5);
+        background: #fff;
+    }
+    &__user-info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5.8rem;
+    }
+    &__overview{
+        position: relative;
+        top: -7.98rem;
+        width: 80.3rem;
+        height: 62.8rem;
+        border-radius: 2rem;
+        border: 0.1px solid var(--Greys-Colors-05, #E5E5E5);
+        background: #fff;
+
+        @include mixins.screen(xl){
+          width: 100%;
+        }
+    }
+    &-navigation__list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 4.1rem;
+    }
+    &-navigation__item{
+        display: flex;
+        align-items: center;
+        gap: 2.4rem;
+        width: 25.9rem;
+        height: 4.2rem;
+        border-radius: 2rem;
+        background: var(--Secondary-Colors-12, #FFF4F1);
+        box-shadow: -5px 4px 17.3px 0px rgba(248, 248, 248, 0.50);
+        transition: all 0.4s ease;
+    }
+    &-navigation__item:hover{
+       background: #ED5A25;
+       color: #fff;
+    }
+    &-navigation__item:hover &-navigation__link{
+       color: #fff;
+    }
+    &-navigation__item i{
+        margin-left: 2rem;
+
+    }
+    &-navigation__link{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        color: #454545;
+        font-family: "Quicksand";
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+}
+// Start user-info
+.user-info{
+    &__name{
+    margin-top: 2.4rem;
+    color: var(--Color-Text-01, #323232);
+    font-family: "Quicksand";
+    font-size: 2rem;
+    font-weight: 700;
+    }
+    &__avatar{
+        position: relative;
+    }
+    &__camera{
+        position: absolute;
+        top: 13.6rem;
+        right: 1.3rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        background: #fff;
+        cursor: pointer;
+    }
+    &__avatar-icon{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: #ED5A25;
+    }
+    &__avatar-icon i{
+       color: #fff;
+       font-size: 1.2rem;
+    }
+    &__label{
+        display: inline-flex;
+        margin-top: 0.8rem;
+        padding: 0.4rem 1.2rem;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        border-radius: 10rem;
+        background: var(--Secondary-Colors-11, #FFDBCE);
+
+        color: var(--Color-Text-01, #323232);
+        font-family: "Inter";
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+    &__lines{
+        margin-top: 2.8rem;
+        width: 27.4rem;
+        height: 1px;
+        border: 1px dashed #E5E5E5;
+    }
+}
+// Start overview_
+.overview{
+    &__content{
+        margin-top: 2.4rem;
+        display: flex;
+        align-items: center;
+        gap: 4rem;
+
+        @include mixins.screen(xl){
+         display: flex;
+         flex-direction: column;
+         height: 70%;
+        }
+    }
+    &__title{
+        margin-top: 4.7rem;
+        margin-left: 2.9rem;
+        color: var(--Color-Text-01, #323232);
+        font-family: "Quicksand";
+        font-size: 2rem;
+        font-weight: 700;
+
+    }
+}
+// Start balance
+.balance{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 2.9rem;
+    width: 34.8rem;
+    height: 16.7rem;
+    border-radius: 2rem;
+    border: 0.1px solid var(--Greys-Colors-05, #E5E5E5);
+    background: #FFF;
+    @include mixins.screen(xl){
+       margin-left: 0;
+    }
+    @include mixins.screen(lg){
+       width: 90%;
+    }
+    &__title{
+        align-self: flex-start;
+        margin-top: 1.8rem;
+        margin-left: 2.6rem;
+        color: #353535;
+        font-family: "Quicksand";
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+    &__lines{
+        margin-top: 2.8rem;
+        width: 27.4rem;
+        height: 1px;
+        border: 1px dashed #E5E5E5;
+    }
+    &__wrapper{
+        flex: 1;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__topup-button{
+        margin-right: 1.8rem;
+        display: flex;
+        padding: 0.4rem 1.2rem;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        border-radius: 100px;
+        background: var(--Secondary-Colors-11, #FFDBCE);
+
+        color: var(--Color-Text-01, #323232);
+        font-family: "Inter";
+        font-size: 1.2rem;
+        font-weight: 400;
+        transition: all 0.4s ease;
+    }
+    &__topup-button:hover{
+        background: #ED5A25;
+        color: #fff;
+    }
+    &__left{
+        display: flex;
+        align-items: center;
+        margin-left: 2rem;
+        gap: 1.2rem;
+    }
+    &__amount{
+        color: var(--Primary-Colors, #ED5A25);
+        font-family: "Quicksand";
+        font-size: 1.6rem;
+        font-weight: 700;
+    }
+}
+// Start purchase history
+.purchase-history{
+    flex: 1;
+    margin-right: 2.9rem;
+    width: 34.8rem;
+    height: 16.7rem;
+    border-radius: 2rem;
+    border: 0.1px solid var(--Greys-Colors-05, #E5E5E5);
+    background: #FFF; 
+    @include mixins.screen(xl){
+       margin-right: 0;
+    }
+    @include mixins.screen(lg){
+       width:90%;
+    }
+}
+// purchase-history
+.purchase-history{
+   &__header{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1.8rem;
+   }
+   &__title{
+    margin-left: 2.6rem;
+    color: #353535;
+    font-family: "Quicksand";
+    font-size: 1.6rem;
+    font-weight: 600;
+   }
+   &__link{
+    margin-right: 3.5rem;
+    color:  rgba(127, 127, 127, 0.50);
+    font-family: "Inter";
+    font-size: 1.2rem;
+    font-weight: 400;
+   }
+   &__link::after{
+    position: relative;
+    display: inline-block;
+    top: -0.8px;
+    left: 0.5rem;
+    content: "\f078";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 600;
+    font-size: 1rem;
+    color:  rgba(127, 127, 127, 0.50);
+    transform: rotate(-90deg);
+    transition: all 0.4s ease;
+   }
+   &__stats{
+    display: flex;
+    justify-content: center;
+    margin-top: 5.2rem;
+    gap: 2rem;
+   }
+   &__stat{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+   }
+   &__stat strong{
+    color: var(--Primary-Colors, #ED5A25);
+    text-align: center;
+    font-family: "Quicksand";
+    font-size: 2rem;
+    font-weight: 600;
+   }
+   &__stat span{
+    color: #454545;
+    text-align: center;
+    font-family: "Quicksand";
+    font-size: 1.2rem;
+    font-weight: 500;
+   }
+  
+}

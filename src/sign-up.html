@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include("./partials/head.ejs") %>
+    <title>Sign-up</title>
+</head>
+<body>
+        <div class="auth-page">
+        <div class="row">
+            <div class="col-12">
+            <div class="auth-page__container container">
+                <!-- Section: Account Creation Info -->
+                <section class="auth-page__setion auth-page__setion--intro">
+                    <h2 class="auth-page__title">Easy steps to join  membership.</h2>
+                    <div class="auth-steps">
+                        <div class="auth-steps__item">
+                            <span class="auth-steps__number">1</span>
+                            <p class="auth-steps__text">Sign up using your email.</p>
+                        </div>
+                         <div class="auth-steps__item">
+                            <span class="auth-steps__number">2</span>
+                            <p class="auth-steps__text">Please click the verification link in your registered email.</p>
+                        </div>
+                         <div class="auth-steps__item">
+                            <span class="auth-steps__number">3</span>
+                            <p class="auth-steps__text">Complete the sign up form.</p>
+                        </div>
+                         <div class="auth-steps__item">
+                            <span class="auth-steps__number">4</span>
+                            <p class="auth-steps__text">You are all set, start enjoy shopping in.</p>
+                        </div>
+                        
+                    </div>
+                    <!-- Section: Sign In Form -->
+                     <div class="row">
+                        <div class="col">
+                            <section class="auth-page__setion auth-page__section--signup">
+                                <h2 class="auth-page__title-signup">SIGN UP</h2>
+                                <!-- Form -->
+                                <form  class="auth-form">
+                                    <div class="auth-form__field">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none" class="auth-form__field-icon">
+                                            <path d="M14.4 2.5C14.8037 2.49987 15.1925 2.65579 15.4884 2.9365C15.7844 3.21721 15.9657 3.60196 15.996 4.01364L16 4.13636V13.9545C16.0001 14.3674 15.8477 14.765 15.5732 15.0677C15.2987 15.3704 14.9225 15.5559 14.52 15.5868L14.4 15.5909H1.6C1.19634 15.591 0.807547 15.4351 0.511562 15.1544C0.215577 14.8737 0.0342747 14.4889 0.00400017 14.0773L8.02144e-08 13.9545V4.13636C-0.000127663 3.72353 0.152325 3.3259 0.426798 3.02319C0.70127 2.72048 1.07748 2.53505 1.48 2.50409L1.6 2.5H14.4ZM14.4 5.29327L8.848 10.9715C8.623 11.2013 8.318 11.3304 8 11.3304C7.682 11.3304 7.377 11.2013 7.152 10.9715L1.6 5.29327V13.9545H14.4V5.29327ZM13.2688 4.13636H2.7312L8 9.52491L13.2688 4.13636Z" fill="#323232"/>
+                                        </svg>
+                                        <input type="email" class="auth-form__input" placeholder="Email Address" spellcheck="false">
+                                        <button class="auth-page__button-signup">
+                                            Send Verification Mail
+                                        </button>
+                                    </div>
+                                </form>
+                                <!-- social-login -->
+                                <div class="auth-form__social-login">
+                                    <p class="auth-form__social-text">
+                                        Sign in with existing login from a social network account
+                                    </p>
+                                        <!-- social-icons -->
+                                    <div class="auth-form__social-icons">
+                                            <i class="fa-brands fa-google"></i>
+                                            <i class="fa-brands fa-github"></i>
+                                            <i class="fa-brands fa-apple"></i>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                     </div>
+                </section>
+            </div>
+            </div>
+        </div>
+        </div>
+      <script type="module" src="./sign.js"></script>
+</body>
+</html>

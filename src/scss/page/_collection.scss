@@ -1,0 +1,672 @@
+@use "/scss/mixins";
+.header{
+    display: block;
+}
+// Start product-menu
+.product-menu{
+    margin-top: 2.7rem;
+    width: 31.5rem;
+    height: 56.3rem;
+    border-radius: 0.2rem;
+    border: 0.1rem solid var(--Greys-Colors-05, #E5E5E5);
+    background: #FFF;
+    @include mixins.screen(lg){
+        width: 25.5rem;
+    }
+    @include mixins.screen(md){
+        display: none;
+    }
+    &__title{
+        margin-top: 2rem;
+        margin-left: 2.2rem;
+        font-family: "Quicksand";
+        font-size: 1.8rem;
+        font-weight: 600;
+        line-height: 2.8rem;
+        color: var(--Text-colors-01, #323232);
+    }
+    &__lines{
+        display: inline-block;
+        width: 100%;
+        height: 0.1rem;
+        background: #E5E5E5;
+    }
+    &__list{
+        margin-top: 1.2rem;
+        margin-left: 2.2rem;
+    }
+    &__item,
+    &__item a{
+       transition: all 0.4s ease;
+    }
+    &__item:hover{
+       transform: translateX(0.5rem);
+    }
+    &__item:hover a{
+       color: #ED5A25;
+    }
+    &__link{
+        color: var(--Color-Text-02, #3E3E3E);
+        font-family: "Quicksand";
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 3.2rem;
+    }
+}
+// price-filter
+.price-filter{
+    margin-top: 2.4rem;
+    width: 31.5rem;
+    height: 24.9rem;
+    border-radius: 0.2rem;
+    border: 0.1rem solid var(--Greys-Colors-05, #E5E5E5);
+    background: #FFF;
+    @include mixins.screen(lg){
+        width: 25.5rem;
+    }
+    @include mixins.screen(md){
+        display: none;
+    }
+    &__title{
+        margin-top: 1.1rem;
+        margin-left: 2.2rem;
+        font-family: "Quicksand";
+        font-size: 1.8rem;
+        font-weight: 600;
+        line-height: 2.8rem;
+        color: var(--Text-colors-01, #323232);
+    }
+    &__range{
+        margin-top: 3.2rem;
+        margin-left: 1.8rem;
+    }
+    &__slider{
+        width: 85%;
+        color: #ED5A25;
+    }
+    &__display{
+        margin-top: 2.7rem;
+        margin-left: 1.8rem;
+        color: var(--Text-colors-02, #3E3E3E);
+        font-family: "Quicksand";
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 2.3rem;
+    }
+    &__button{
+        margin-top: 2.7rem;
+        margin-left: 1.8rem;
+        width: 7.4rem;
+        padding: 0.6rem;
+        border-radius: 0.4rem;
+        background: var(--Primary-Colors, #ED5A25);
+        font-family: "Manrope";
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #fff;    
+    }
+}
+
+// Start rating-filter
+.rating-filter{
+    margin-top: 2.2rem;
+    width: 31.5rem;
+    height: 27.6rem;
+    border-radius: 0.2rem;
+    border: 0.1rem solid var(--Greys-Colors-05, #E5E5E5);
+    background: #FFF;
+    @include mixins.screen(lg){
+        width: 25.5rem;
+    }
+    @include mixins.screen(md){
+        display: none;
+    }
+    &__title{
+        margin-top: 1.1rem;
+        margin-left: 2.2rem;
+        font-family: "Quicksand";
+        font-size: 1.8rem;
+        font-weight: 600;
+        line-height: 2.8rem;
+        color: var(--Text-colors-01, #323232);
+    }
+    &__form{
+        margin-top: 3.2rem;
+    }
+    &__option + &__option{
+        margin-top: 1.5rem;
+    }
+    &__option{
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    &__option::before{
+        content: "";
+        position: absolute;
+        top: 0.1rem;
+        left: 2.3rem;
+        width: 1.6rem;
+        height: 1.6rem;
+        border: 0.2rem solid #3E3E3E;
+        border-radius: 4px;
+        right: 3.5rem;
+        transition: all 0.5s ease;
+    }
+    &__option:has([type="checkbox"]:checked)::before{
+        background: #ED5A25;
+        border-color:#ED5A25;
+    }
+    &__option:has([type="checkbox"]:checked)::after{
+        position: absolute;
+        content: "";
+        top: 4px;
+        left: 26px;
+        width: 9.6px;
+        height: 4px;
+        border: 2px solid;
+        border-bottom-left-radius: 2px;
+        border-top-right-radius: 2px;
+        border-color: transparent transparent #fff #fff;
+        rotate: 318deg;
+    }
+    &__stars{
+        margin-left: 6.3rem;
+    }
+    &__count{
+        margin-left: 1.6rem;
+        color: var(--Color-Text-04, #787777);
+        font-family: "Quicksand";
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 2rem;
+    }
+    &__stars-img{
+        transition: all 0.4s ease;
+    }
+    &__stars-img:hover{
+        color: #ED5A25;
+    }
+}
+// brand-filter
+.brand-filter{
+    margin-top: 2.2rem;
+    width: 31.5rem;
+    height: 49.1rem;
+    border-radius: 0.2rem;
+    border: 0.1rem solid var(--Greys-Colors-05, #E5E5E5);
+    background: #FFF;
+    @include mixins.screen(lg){
+        width: 25.5rem;
+    }
+    @include mixins.screen(md){
+        display: none;
+    }
+    &__title{
+        margin-top: 1.1rem;
+        margin-left: 2.2rem;
+        font-family: "Quicksand";
+        font-size: 1.8rem;
+        font-weight: 600;
+        line-height: 2.8rem;
+        color: var(--Text-colors-01, #323232);
+    }
+    &__form{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+    &__option{
+        position: relative;
+    }
+    &__option::before{
+        content: "";
+        position: absolute;
+        top: 0.1rem;
+        left: 2.3rem;
+        width: 1.6rem;
+        height: 1.6rem;
+        border: 0.2rem solid #3E3E3E;
+        border-radius: 4px;
+        right: 3.5rem;
+        transition: all 0.5s ease;
+    }
+     &__option:has([type="checkbox"]:checked)::before{
+        background: #ED5A25;
+        border-color:#ED5A25;
+    }
+    &__option:has([type="checkbox"]:checked)::after{
+        position: absolute;
+        content: "";
+        top: 0.4rem;
+        left: 2.6rem;
+        width: 0.96rem;
+        height: 0.4rem;
+        border: 0.2rem solid;
+        border-bottom-left-radius: 0.2rem;
+        border-top-right-radius: 0.2rem;
+        border-color: transparent transparent #fff #fff;
+        rotate: 318deg;
+    }
+    &__label{
+        margin-left: 6.3rem;
+        color: var(--Greys-Colors-01, #404040);
+        font-family: "Quicksand";
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 125.081%;
+    }
+}
+
+// promo-card
+.promo-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3.4em;
+    width: 31.5rem;
+    height: 44.2rem;
+    border-radius: 2.5rem;
+    background: #FFDACD;
+    @include mixins.screen(lg){
+        width: 25.5rem;
+    }
+    @include mixins.screen(md){
+        display: none;
+    }
+    &__image{
+        margin-top: 4.4rem;
+        width: 25.5rem;
+        height: 17.9rem;
+        object-fit: cover;
+    }
+    &__title{
+        margin-top: 3rem;
+        width: 18.9rem;
+        text-align: center;
+        font-family: "Quicksand";
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: #951418;
+
+    }
+    &__button{
+        margin-top: 3.3rem;
+        display: flex;
+        width: 11.7rem;
+        height: 3.6rem;
+        padding: 1rem;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        border-radius: 10rem;
+        border: 0.1rem solid var(--Greys-Colors-07, #FFF);
+        background: var(--Greys-Colors-07, #FFF);
+
+        color: #ED5A25;
+        font-family:"Quicksand";
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 2rem;
+    }
+    &__icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 1.4rem;
+        height: 1.4rem;
+        border-radius: 50%;
+        background: #FFDACD;
+    }
+     &__icon i{
+        font-size: 1rem;
+    }
+}
+// Start header-product
+.header-product{
+    margin-top: 2.7rem;
+    &__text{
+        color: var(--Text-colors-01, #323232);
+        font-family: "Manrope";
+        font-size: 1.4rem;
+        font-weight: 500;
+
+    }
+}
+.product-card{
+    display: flex;
+    flex-direction: column;
+    width: 22rem;    
+    height: 33rem;
+    border-radius: 3rem;
+    border: 1px solid var(--Greys-Colors-06, #F2F2F2);
+    background: #FFF;
+    @include mixins.screen(lg){
+       width: 100%;
+       height: 105%;
+    }
+    @include mixins.screen(md){
+       width: 100%;
+    }
+    @include mixins.screen(sm){
+       width: 100%;
+       height: 105%;
+    }
+    
+    &__image-wrapper{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    &__image-wrapper i{
+        position: absolute;
+        top: 0.9rem;
+        right: 2.9rem;
+        z-index: 1;
+        display: inline-block;
+        width: 2.4rem;
+        height: 2.4rem;
+        line-height: 2.4rem;
+        text-align: center;
+        background: #fff;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.4s ease;
+    }
+    &__image-wrapper i:hover{
+        border: #F42323;
+        color: #F42323;
+        transform: scale(1.1); 
+    }
+    &__thumb{
+        @include mixins.screen(xxl){
+           width: 100%;
+        }
+    }
+    &__thumb{
+        @include mixins.screen(md){
+           width: 100%;
+        }
+    }
+    &__image-wrapper &__thumb-link &__thumb{
+        transition: all 0.4s ease;
+    }
+    &__image-wrapper:hover &__thumb-link &__thumb{
+        transform: scale(1.1);
+    }
+    &__thumb-link{
+        display: flex;
+        width: 90%;
+    }
+    &__info{
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        gap: 1.4rem;
+        margin-top: 1.2rem;
+        margin-left: 1.9rem;
+        @include mixins.screen(lg){
+            gap: 2.8rem;
+        }
+        @include mixins.screen(md){
+            gap: 2.5rem;
+            margin-left: 0.9rem;
+        }
+    }
+    &__title{
+        width: 16.3rem;
+        color: #000;
+        font-family: "Poppins";
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        @include mixins.screen(lg){
+            font-size: 1.3rem;
+        }
+        @include mixins.screen(md){
+            font-size: 1.5rem;
+             width: 20.7rem;
+        }
+        @include mixins.screen(md){
+            width: 100%;
+        }
+    }
+    &__price{
+        color: var(--Primary-Colors, #ED5A25);
+        font-family: "Quicksand";
+        font-size: 1.5rem;
+        font-weight: 600;
+        @include mixins.screen(md){
+            font-size: 1.9rem;
+        }
+    }
+    &__bottom{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        color: #ED5A25;
+        width: 18rem;
+        height: 2.0rem;
+        margin-bottom: 0.8rem;
+        border-radius: 12.9rem;
+        background: #FFF4F1;
+        transition: all 0.4s ease;
+        cursor: pointer;
+        @include mixins.screen(lg){
+            width: 13rem;
+        }
+        @include mixins.screen(md){
+            width: 21.3rem;
+        }
+        @include mixins.screen(sm){
+            width: 94%;
+            height: 100%;
+        }
+    }
+    &__btn{
+        color: var(--Primary-Colors, #ED5A25);
+        font-family: "Poppins";
+        font-size: 1.5rem;
+        font-weight: 400;
+
+    }
+    &__bottom:hover{
+        background: #ED5A25;
+    }
+    &__bottom:hover i{
+        color: #fff;
+    }
+     &__bottom:hover &__btn{
+        color: #fff;
+    }
+}
+// Start pagination
+.pagination{
+    margin-top: 27rem;
+    &__list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.3rem;
+    }
+    &__arrow i{
+        color:#787777;
+    }
+    &__button{
+        width: 4.4rem;
+        height: 4.4rem; 
+        border-radius: 50%;
+        background:#EDEDED;
+
+        color: #787777;
+        font-family: "Quicksand";
+        font-size: 2.5rem;
+        font-weight: 600;
+        transition: all 0.4s ease;
+    }
+    &__button:hover{
+        background: #ED5A25;
+        color: #fff;
+    }
+}
+
+// breadcrumb
+.breadcrumb{
+    margin-top: 2.7rem;
+    @include mixins.screen(sm){
+            img,
+            &__text,
+            &__text-active{
+                display: block;
+            }
+    }
+    &__list{
+        display: flex;
+        align-items: center;
+    }
+    &__item{
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+    }
+    &__icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 4.4rem;
+        height: 2rem;
+        padding: 0.8rem;
+        gap: 1rem;
+        border-radius: 10rem;
+        background: var(--Primary-Colors, #ED5A25);
+    }
+    &__text{
+        position: relative;
+        color: var(--Color-Text, #AFAFAF);
+        font-family: "Manrope";
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+    &__text::after{
+        position: absolute;
+        top: 0.1rem;
+        left: 9.3rem;
+        content: "\f078";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 600;
+        font-size: 1.2rem;
+        color: #404040;
+    }
+    &__text-active{
+        margin-left: 2rem;
+        color: var(--Text-colors-01, #323232);
+        font-family: "Manrope";
+        font-size: 1.4rem;
+        font-weight: 500;
+
+    }
+}
+// Start voucher-menu
+.voucher-check{
+     @include mixins.screen(sm){
+        display: block;
+    }
+}
+.voucher-menu{
+    position: fixed;
+    top: 1.9rem;
+    left: 1.2rem;
+    z-index: 999;
+    width: 34.1rem;
+    height: 59.9rem;
+    border-radius: 2rem;
+    background: #FFF;
+    transform: scale(0);
+    transition: all 0.4s ease;
+    &__header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 2.8rem;
+        margin-left: 2.7rem;
+    }
+    &__title{
+        color: var(--Color-Text-03, #565656);
+        font-family: "Quicksand";
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+    &__close{
+        margin-right: 2rem;
+        font-size: 1.7rem;
+        display: inline-block;
+        padding: 0.5rem;
+    }
+    @include mixins.screen(sm){
+        &__title,
+        &__close,
+        &__list{
+            display: block;
+        }
+    }
+    &__lines{
+        display: block;
+        margin-top: 2.4rem;
+        width: 34.1rem;
+        height: 0.1rem;
+        background: #F2F2F2;
+    }
+    &__nav{
+        margin: 1.5rem 2.7rem 0 2.7rem;
+    }
+    &__link{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: var(--Color-Text-02, #3E3E3E);
+        font-family: "Quicksand";
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 3.2rem;
+        transition: all 0.4s ease;
+    }
+    &__link:hover{
+        transform: translateX(0.5rem);
+        color: #ED5A25;
+    }
+    &__link:hover &__count{
+        color: #ED5A25;
+    }
+    &__count{
+        flex: 1;
+        text-align: right;
+        color: var(--Color-Text, #AFAFAF);
+        font-family: "Quicksand";
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 3.2px;
+        transition: all 0.4s ease;
+    }
+}
+#voucher-open:checked ~ .voucher-menu {
+    transform:scale(1);
+}
+#voucher-open:checked ~ .voucher-menu__close{
+    transform:scale(0);
+}
+#voucher-open:checked ~ .voucher-overlay{
+   @include mixins.screen(md){
+       display: block;
+       position: fixed;
+       inset: 0;
+       opacity: 0;
+       z-index: 998;
+       visibility: hidden;
+       background: rgba(0,0,0,0.6);
+       transition: all 0.4s ease;
+    }
+}

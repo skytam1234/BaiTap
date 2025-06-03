@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-in</title>
+    <%- include("./partials/head.ejs") %>
+</head>
+<body>
+
+    <%- include("./partials/header.ejs") %>    
+    <!-- Start payment -->
+    <div class="content-payment">
+    <div class="container">
+        <div class="row row-cols-md-1 row-cols-sm-1">
+            <div class="col">
+                <section class="payment">
+                    <h1 class="payment__title">Online Payment</h1>
+                    <form class="payment__form">
+                            <div class="row">
+                                <div class="col">
+                                    <fieldset class="payment__section">
+                                        <legend class="payment__legend">
+                                            Thông tin vận chuyển và thanh toán
+                                        </legend>
+                                            
+                                        <div class="payment__wrapper">
+                                            <div class="payment__field">
+                                                <label class="payment__label" for="name">Tên</label>
+                                                <input class="payment__input" type="text" id="name" name="name" value="ManhThang" required>
+                                            </div>
+                                            <div class="payment__lines"></div>
+                                            <div class="payment__field">
+                                                <label class="payment__label" for="email">E-mail</label>
+                                                <input class="payment__input" type="email" id="email" name="email" value="Obito@gmail.com" required>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <fieldset class="payment__section">
+                                        <legend class="payment__legend">Thông tin thanh toán</legend>
+                                        <div class="payment__wrapper-section">
+                                            <div class="payment__field-section">
+                                                <div class="payment__field-section-inner">
+                                                    <label class="payment__label" for="card-number">Số thẻ</label>
+                                                    <input class="payment__input-section" type="text" id="card-number" name="card-number" placeholder="Card number" required>
+                                                </div>
+                                                <i class="fa-regular fa-credit-card"></i>
+                                            </div>
+                                            <div class="payment__lines"></div>
+                                            <div class="payment__field-section">
+                                                <label class="payment__label">Hết hạn</label>
+                                                <input class="payment__input-section" type="text" id="expiry" name="expiry" placeholder="MM/YY" required>
+                                            </div>
+                                            <div class="payment__lines"></div>
+                                            <div class="payment__field-section">
+                                                <label class="payment__label" for="cvc">CVC</label>
+                                                <input class="payment__input-section" type="text" id="cvc" name="cvc" placeholder="xxx" required>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="payment__actions">
+                                        <button class="payment__button payment__button--submit" type="submit">Thanh toán</button>
+                                        <button class="payment__button payment__button--cancel" type="button">Huỷ bỏ</button>
+                                    </div>
+                                </div>
+                            </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- End payment -->
+      <script type="module" src="./main.js"></script>
+</body>
+</html>

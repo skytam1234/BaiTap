@@ -1,0 +1,35 @@
+@use "./reset";
+
+// Pages
+@use "./page/sign-in";
+@use "./page/sign-up";
+
+// Common
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: "Inter","Manrope","Quicksand";
+}
+
+button, input, textarea, select {
+    font-size: inherit;
+    font-family: inherit;
+
+}
+
+button{
+    cursor: pointer;
+    background: transparent;
+    outline: none;
+    border: none;
+}
+a{
+    color: inherit;
+}

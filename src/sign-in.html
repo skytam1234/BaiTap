@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include("./partials/head.ejs") %>
+    <title>Sign-in</title>
+</head>
+<body>
+        <div class="auth-page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                    <div class="auth-page__container">
+                        <!-- Section: Account Creation Info -->
+                        <section class="auth-page__setion auth-page__setion--intro">
+                            <h2 class="auth-page__title">One account for all services</h2>
+                            <p class="auth-page__description">
+                                Hi there! Sign up an account and enjoy your shopping experience on
+                            </p>
+                            <button class="auth-page__button btn">
+                                CREATE NEW ACCOUNT
+                            </button>
+                            <!-- Section: Sign In Form -->
+                             <div class="row">
+                                <div class="col">
+                                    <section class="auth-page__setion auth-page__section--signin">
+                                        <h2 class="auth-page__title-signin">SIGN IN</h2>
+                                        <!-- Form -->
+                                        <form class="auth-form">
+                                            <div class="auth-form__field">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none" class="auth-form__field-icon">
+                                                    <path d="M14.4 2.5C14.8037 2.49987 15.1925 2.65579 15.4884 2.9365C15.7844 3.21721 15.9657 3.60196 15.996 4.01364L16 4.13636V13.9545C16.0001 14.3674 15.8477 14.765 15.5732 15.0677C15.2987 15.3704 14.9225 15.5559 14.52 15.5868L14.4 15.5909H1.6C1.19634 15.591 0.807547 15.4351 0.511562 15.1544C0.215577 14.8737 0.0342747 14.4889 0.00400017 14.0773L8.02144e-08 13.9545V4.13636C-0.000127663 3.72353 0.152325 3.3259 0.426798 3.02319C0.70127 2.72048 1.07748 2.53505 1.48 2.50409L1.6 2.5H14.4ZM14.4 5.29327L8.848 10.9715C8.623 11.2013 8.318 11.3304 8 11.3304C7.682 11.3304 7.377 11.2013 7.152 10.9715L1.6 5.29327V13.9545H14.4V5.29327ZM13.2688 4.13636H2.7312L8 9.52491L13.2688 4.13636Z" fill="#323232"/>
+                                                </svg>
+                                                <input type="email" class="auth-form__input" placeholder="Email Address" spellcheck="false">
+                                            </div>
+                                            <div class="auth-form__field">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="auth-form__field-icon">
+                                                    <path d="M10.1905 14.5477C9.73586 14.5477 9.29983 14.367 8.97833 14.0456C8.65684 13.7241 8.47623 13.288 8.47623 12.8334C8.47623 11.8819 9.23909 11.1191 10.1905 11.1191C10.6452 11.1191 11.0812 11.2997 11.4027 11.6212C11.7242 11.9427 11.9048 12.3787 11.9048 12.8334C11.9048 13.288 11.7242 13.7241 11.4027 14.0456C11.0812 14.367 10.6452 14.5477 10.1905 14.5477ZM15.3334 17.1191V8.54766H5.04766V17.1191H15.3334ZM15.3334 6.83337C15.788 6.83337 16.2241 7.01399 16.5456 7.33548C16.867 7.65697 17.0477 8.093 17.0477 8.54766V17.1191C17.0477 17.5737 16.867 18.0098 16.5456 18.3313C16.2241 18.6528 15.788 18.8334 15.3334 18.8334H5.04766C4.593 18.8334 4.15697 18.6528 3.83548 18.3313C3.51399 18.0098 3.33337 17.5737 3.33337 17.1191V8.54766C3.33337 7.59623 4.09623 6.83337 5.04766 6.83337H5.9048V5.11909C5.9048 3.98245 6.35633 2.89236 7.16006 2.08863C7.96379 1.2849 9.05388 0.833374 10.1905 0.833374C10.7533 0.833374 11.3106 0.944227 11.8306 1.1596C12.3506 1.37498 12.823 1.69067 13.221 2.08863C13.6189 2.4866 13.9346 2.95905 14.15 3.47902C14.3654 3.99898 14.4762 4.55628 14.4762 5.11909V6.83337H15.3334ZM10.1905 2.54766C9.50853 2.54766 8.85448 2.81858 8.37224 3.30081C7.89001 3.78305 7.61909 4.4371 7.61909 5.11909V6.83337H12.7619V5.11909C12.7619 4.4371 12.491 3.78305 12.0088 3.30081C11.5266 2.81858 10.8725 2.54766 10.1905 2.54766Z" fill="#3E3E3E"/>
+                                                </svg>
+                                                <input type="password" class="auth-form__input" placeholder="Password" spellcheck="false">
+                                                <button class="auth-form__submit">
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </button>
+                                            </div>
+                                            <div>
+                                                <a href="#!" class="auth-form__link auth-form__link--forgot">
+                                                    Forgot password?
+                                                </a>
+                                                <a href="#!" class="auth-form__link auth-form__link--forgot auth-form__link-mb">CREATE NEW ACCOUNT</a>
+                                            </div>
+                                        </form>
+                                        <!-- social-login -->
+                                        <div class="auth-form__social-login">
+                                            <p class="auth-form__social-text">
+                                                Sign in with existing login from a social network account
+                                            </p>
+                                                <!-- social-icons -->
+                                            <div class="auth-form__social-icons">
+                                                    <i class="fa-brands fa-google"></i>
+                                                    <i class="fa-brands fa-github"></i>
+                                                    <i class="fa-brands fa-apple"></i>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                             </div>
+                        </section>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      <script type="module" src="./sign.js"></script>
+</body>
+</html>
